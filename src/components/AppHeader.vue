@@ -40,7 +40,7 @@ import AppInnerWrap from './AppInnerWrap.vue'
       top: 0;
 
       @media (max-width: toEm(1300)) {
-        background: url(../assests/images/wave.svg) 0 0 / contain no-repeat;
+        background: url(../assests/images/design/wave.svg) 0 0 / contain no-repeat;
         width: toRem(108);
         height: toRem(96);
         left: toRem(-10);
@@ -48,8 +48,19 @@ import AppInnerWrap from './AppInnerWrap.vue'
       @media (min-width: toEm(1301)) and (max-width: toEm(1920)) {
         width: toRem(421);
         height: toRem(332);
-        background: url(../assests/images/wave-big.svg) 0 0 / contain no-repeat;
+        background: url(../assests/images/design/wave-big.svg) 0 0 / contain no-repeat;
         left: -26%;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: toRem(215);
+      height: toRem(215);
+      @media (min-width: toEm(1301)) and (max-width: toEm(1920)) {
+        background: url(../assests/images/design/circle.svg) 0 0 / contain no-repeat;
+        right: -26%;
       }
     }
     & > .link {
@@ -63,9 +74,10 @@ import AppInnerWrap from './AppInnerWrap.vue'
           position: absolute;
           bottom: 0;
           right: -75%;
-          background: url(../assests/images/plus.svg) 0 0 / contain no-repeat;
+          background: url(../assests/images/design/plus.svg) 0 0 / contain no-repeat;
           width: toRem(8);
           height: toRem(8);
+          pointer-events: none;
         }
       }
       .logo {
