@@ -1,15 +1,20 @@
-<script setup></script>
+<script setup>
+import IconLogo from './icons/IconLogo.vue'
+</script>
 
 <template>
   <header class="app-header">
-    <p>Logo</p>
+    <a href="/">
+      <IconLogo class="logo" />
+    </a>
   </header>
 </template>
 
 <style scoped lang="scss">
 .app-header {
-  p {
-    background-color: aqua;
+  .logo {
+    width: toRem(133);
+    height: toRem(32);
   }
 }
 </style>
