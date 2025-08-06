@@ -17,7 +17,6 @@
 <style lang="scss" scoped>
 .menu {
   position: fixed;
-
   top: 0;
   background-color: var(--main-bg);
   width: 100vw;
@@ -26,20 +25,13 @@
   overflow: auto;
   margin-top: toRem(87);
   transition: right 0.3s;
-  font-size: toRem(23);
-  font-weight: 400;
   padding: 0 toRem(10) toRem(10);
-  color: var(--highlight-color-text);
   @media (min-width: toEm(768)) {
     position: static;
     margin-top: 0;
-    font-size: toRem(20);
-    line-height: 1.15;
     width: auto;
     height: auto;
     padding: 0;
-
-    color: var(--main-color-text);
   }
   html.open-menu & {
     right: 0;
@@ -57,7 +49,22 @@
     }
   }
   .link {
+    font-size: toRem(28);
+    font-weight: 400;
     padding: toRem(10);
+    color: var(--highlight-color-text);
+
+    transition: color 0.3s;
+    @media (min-width: toEm(768)) {
+      font-size: toRem(20);
+      line-height: 1.15;
+      color: var(--main-color-text);
+    }
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        color: var(--main-link-hover);
+      }
+    }
   }
 }
 </style>

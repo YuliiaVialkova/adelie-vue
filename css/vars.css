@@ -3,5 +3,8 @@
   --highlight-color-text: #4cf049;
   --text-underline-color: #4cf049;
   --main-bg-icon: #000;
+  --main-color-icon: #000;
+  --main-hover-icon: #4cf049;
   --main-bg: #fff;
+  --main-link-hover: #4cf049;
 }

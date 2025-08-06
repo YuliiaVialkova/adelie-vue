@@ -15,7 +15,9 @@ import AppInnerWrap from './AppInnerWrap.vue'
         </a>
         <AppMenu class="header-menu" />
         <div class="actions">
-          <IconSearch class="icon-search" />
+          <a href="#" class="link">
+            <IconSearch class="icon-search" />
+          </a>
         </div>
         <IconBurger class="burger-menu" />
       </div>
@@ -43,53 +45,60 @@ import AppInnerWrap from './AppInnerWrap.vue'
         height: toRem(96);
         left: toRem(-10);
       }
-      @media (min-width: toEm(1300)) and (max-width: toEm(1920)) {
+      @media (min-width: toEm(1301)) and (max-width: toEm(1920)) {
         width: toRem(421);
         height: toRem(332);
         background: url(../assests/images/wave-big.svg) 0 0 / contain no-repeat;
-        left: -28%;
+        left: -26%;
       }
     }
-  }
-  .link {
-    margin-right: auto;
-    font-size: 0;
-    line-height: 1;
-    position: relative;
-    @media (min-width: toEm(768)) {
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: -75%;
-        background: url(../assests/images/plus.svg) 0 0 / contain no-repeat;
-        width: toRem(8);
-        height: toRem(8);
+    & > .link {
+      margin-right: auto;
+      font-size: 0;
+      line-height: 1;
+      position: relative;
+      @media (min-width: toEm(768)) {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: -75%;
+          background: url(../assests/images/plus.svg) 0 0 / contain no-repeat;
+          width: toRem(8);
+          height: toRem(8);
+        }
+      }
+      .logo {
+        width: toRem(133);
+        height: toRem(32);
+        @media (min-width: toEm(1024)) {
+          width: toRem(169);
+          height: toRem(41);
+        }
       }
     }
-    .logo {
-      width: toRem(133);
-      height: toRem(32);
-      @media (min-width: toEm(1024)) {
-        width: toRem(169);
-        height: toRem(41);
+    .actions {
+      display: flex;
+      gap: toRem(20);
+      @media (min-width: toEm(768)) {
+        margin-left: clamp(toRem(22), 7vw, toRem(92));
+      }
+      & > .link {
+        font-size: 0;
+        line-height: 1;
+        .icon-search {
+          width: toRem(28);
+          height: toRem(28);
+          @media (min-width: toEm(1024)) {
+            width: toRem(32);
+            height: toRem(32);
+          }
+        }
       }
     }
-  }
-
-  .actions {
-    display: flex;
-    gap: toRem(20);
-    @media (min-width: toEm(768)) {
-      margin-left: clamp(toRem(22), 7vw, toRem(92));
+    .burger-menu {
+      position: relative;
     }
-    .icon-search {
-      width: toRem(28);
-      height: toRem(28);
-    }
-  }
-  .burger-menu {
-    position: relative;
   }
 }
 </style>

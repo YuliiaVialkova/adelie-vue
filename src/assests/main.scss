@@ -10,3 +10,13 @@ body {
   line-height: 1.5;
   color: var(--main-color-text);
 }
+
+.icon {
+  color: var(--main-color-icon);
+  transition: color 0.3s;
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &:hover {
+      color: var(--main-hover-icon);
+    }
+  }
+}

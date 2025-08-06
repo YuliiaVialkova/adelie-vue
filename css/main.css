@@ -83,6 +83,11 @@ label {
   --main-color-text: #000;
   --highlight-color-text: #4cf049;
   --text-underline-color: #4cf049;
+  --main-bg-icon: #000;
+  --main-color-icon: #000;
+  --main-hover-icon: #4cf049;
+  --main-bg: #fff;
+  --main-link-hover: #4cf049;
 }
 
 @font-face {
@@ -105,4 +110,15 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: var(--main-color-text);
+}
+
+.icon {
+  color: var(--main-color-icon);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .icon:hover {
+    color: var(--main-hover-icon);
+  }
 }
