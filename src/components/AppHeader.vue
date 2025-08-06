@@ -25,6 +25,25 @@ import AppInnerWrap from './AppInnerWrap.vue'
 
 <style scoped lang="scss">
 .app-header {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../assests/images/wave.svg) 0 0 / contain no-repeat;
+    width: toRem(108);
+    height: toRem(96);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: toRem(15);
+    left: 54%;
+    background: url(../assests/images/plus.svg) 0 0 / contain no-repeat;
+    width: toRem(8);
+    height: toRem(8);
+  }
   .body {
     display: flex;
     align-items: center;
@@ -35,6 +54,8 @@ import AppInnerWrap from './AppInnerWrap.vue'
   }
   .link {
     margin-right: auto;
+    font-size: 0;
+    line-height: 1;
     .logo {
       width: toRem(133);
       height: toRem(32);
