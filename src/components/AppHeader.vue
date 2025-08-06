@@ -13,11 +13,11 @@ import AppInnerWrap from './AppInnerWrap.vue'
         <a href="/" class="link">
           <IconLogo class="logo" />
         </a>
-        <AppMenu class="menu" />
+        <AppMenu class="header-menu" />
         <div class="actions">
           <IconSearch class="icon-search" />
         </div>
-        <IconBurger />
+        <IconBurger class="burger-menu" />
       </div>
     </AppInnerWrap>
   </header>
@@ -31,6 +31,7 @@ import AppInnerWrap from './AppInnerWrap.vue'
     justify-content: center;
     gap: toRem(22);
     padding: toRem(20) 0 toRem(35) toRem(20);
+    position: relative;
   }
   .link {
     margin-right: auto;
@@ -48,8 +49,8 @@ import AppInnerWrap from './AppInnerWrap.vue'
       height: toRem(28);
     }
   }
-  .menu {
-    display: none;
+  .burger-menu {
+    position: relative;
   }
 }
 </style>

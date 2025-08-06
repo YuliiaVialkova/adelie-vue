@@ -1,12 +1,11 @@
 <template>
-  <div class="icon-burger">
+  <button class="icon-burger">
     <span></span>
-  </div>
+  </button>
 </template>
 
 <style lang="scss" scoped>
 .icon-burger {
-  position: relative;
   width: toRem(40);
   height: toRem(22);
 
@@ -19,6 +18,7 @@
     position: absolute;
     right: 0;
     background-color: var(--main-bg-icon);
+    transition: rotate 0.3s;
   }
   &::before {
     top: 0;
@@ -30,6 +30,21 @@
     top: 50%;
     translate: 0 -50%;
     width: 70%;
+  }
+  html.open-menu & {
+    span {
+      width: 0;
+    }
+    &::before {
+      top: 50%;
+      translate: 0 -50%;
+      rotate: -45deg;
+    }
+    &::after {
+      bottom: 50%;
+      translate: 0 50%;
+      rotate: 45deg;
+    }
   }
 }
 </style>
