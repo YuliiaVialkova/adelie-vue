@@ -17,9 +17,7 @@
 <style lang="scss" scoped>
 .menu {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+
   top: 0;
   background-color: var(--main-bg);
   width: 100vw;
@@ -32,8 +30,31 @@
   font-weight: 400;
   padding: 0 toRem(10) toRem(10);
   color: var(--highlight-color-text);
+  @media (min-width: toEm(768)) {
+    position: static;
+    margin-top: 0;
+    font-size: toRem(20);
+    line-height: 1.15;
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    color: var(--main-color-text);
+  }
   html.open-menu & {
     right: 0;
+  }
+  & .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (min-width: toEm(768)) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(toRem(30), 5vw, toRem(60));
+    }
   }
   .link {
     padding: toRem(10);

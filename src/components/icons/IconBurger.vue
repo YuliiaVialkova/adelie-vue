@@ -8,7 +8,9 @@
 .icon-burger {
   width: toRem(40);
   height: toRem(22);
-
+  @media (min-width: toEm(768)) {
+    display: none;
+  }
   &::before,
   &::after,
   span {
