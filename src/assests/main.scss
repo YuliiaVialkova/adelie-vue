@@ -1,7 +1,7 @@
-@import 'reset.scss';
-@import 'vars.scss';
-@import 'mixins.scss';
-@import 'fonts.scss';
+@use './reset.scss' as *;
+@use './vars.scss' as *;
+@use './mixins.scss' as *;
+@use './fonts.scss' as *;
 
 body {
   font-family: 'Gilroy', sans-serif;
