@@ -89,6 +89,28 @@ import AppInnerWrap from './AppInnerWrap.vue'
         }
       }
     }
+    .header-menu {
+      position: fixed;
+      top: 0;
+      background-color: var(--main-bg);
+      width: 100vw;
+      height: 100vh;
+      right: -100%;
+      overflow: auto;
+      margin-top: toRem(87);
+      transition: right 0.3s;
+      padding: 0 toRem(10) toRem(10);
+      @media (min-width: toEm(768)) {
+        position: static;
+        margin-top: 0;
+        width: auto;
+        height: auto;
+        padding: 0;
+      }
+      html.open-menu & {
+        right: 0;
+      }
+    }
     .actions {
       display: flex;
       gap: toRem(20);

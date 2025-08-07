@@ -28,7 +28,7 @@ import AppMenu from './AppMenu.vue'
   .body {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: flex-end;
     height: 100%;
     color: var(--additional-color-text);
     text-align: center;
