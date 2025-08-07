@@ -3,6 +3,12 @@
 @use './mixins.scss' as *;
 @use './fonts.scss' as *;
 
+#vue-inspector-container {
+  display: none !important;
+}
+#__vue-devtools-container__ {
+  display: none !important;
+}
 body {
   font-family: 'Gilroy', sans-serif;
   font-size: toRem(18);

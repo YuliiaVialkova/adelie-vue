@@ -104,6 +104,14 @@ label {
   font-style: normal;
   font-display: swap;
 }
+#vue-inspector-container {
+  display: none !important;
+}
+
+#__vue-devtools-container__ {
+  display: none !important;
+}
+
 body {
   font-family: "Gilroy", sans-serif;
   font-size: 1.125rem;
