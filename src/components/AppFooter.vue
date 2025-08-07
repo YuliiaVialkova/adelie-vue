@@ -1,11 +1,15 @@
 <script setup>
 import AppInnerWrap from './AppInnerWrap.vue'
 import IconLogo from './icons/IconLogo.vue'
+import IconFooterBg from './icons/IconFooterBg.vue'
 import AppMenu from './AppMenu.vue'
 </script>
 
 <template>
   <footer class="app-footer">
+    <div class="icon-wrap">
+      <IconFooterBg class="icon--footer-bg" />
+    </div>
     <AppInnerWrap class="footer-wrap">
       <div class="body">
         <a href="/">
@@ -20,39 +24,59 @@ import AppMenu from './AppMenu.vue'
 
 <style lang="scss" scoped>
 .app-footer {
-  background: url(../assests/images/design/footer-bg.svg) center / cover no-repeat;
+  position: relative;
+  .icon-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .icon--footer-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
 
   .body {
+    padding-top: toRem(280);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
-
     color: var(--additional-color-text);
-    text-align: center;
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      background: url(../assests/images/design/footer-wave.svg) 0 0 / cover no-repeat;
 
-      right: 0;
+    @media (min-width: toEm(1024)) {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-bottom: toRem(90);
     }
 
     .logo {
       width: toRem(139);
       height: toRem(34);
-      margin: toRem(31);
+      margin-bottom: toRem(31);
       color: var(--additional-color-icon);
+      @media (min-width: toEm(1024)) {
+        margin-bottom: 0;
+        margin-right: toRem(30);
+      }
     }
     p {
       font-size: toRem(16);
       font-weight: 400;
       line-height: 1.18;
       margin-bottom: toRem(27);
+      @media (min-width: toEm(1024)) {
+        margin-bottom: 0;
+      }
     }
     .footer-menu {
-      margin-bottom: toRem(37);
+      margin-bottom: toRem(45);
+      @media (min-width: toEm(1024)) {
+        margin-bottom: 0;
+        margin-left: toRem(145);
+      }
     }
   }
 }

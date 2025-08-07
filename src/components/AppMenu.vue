@@ -34,6 +34,10 @@
     align-items: center;
     justify-content: center;
     gap: toRem(50);
+    .item {
+      font-size: 0;
+      line-height: 1;
+    }
   }
   .link {
     font-weight: 400;
