@@ -33,6 +33,12 @@ import AppInnerWrap from './AppInnerWrap.vue'
     justify-content: center;
     gap: toRem(22);
     padding: toRem(20) 0 toRem(35) toRem(20);
+    @media (min-width: toEm(600)) {
+      padding-bottom: toRem(50);
+    }
+    @media (min-width: toEm(1024)) {
+      padding-bottom: toRem(88);
+    }
     & > .link {
       margin-right: auto;
       font-size: 0;

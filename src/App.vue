@@ -6,7 +6,7 @@ import AppFooter from './components/AppFooter.vue'
 <template>
   <div class="body">
     <app-header></app-header>
-    <main class="page">
+    <main>
       <router-view />
     </main>
     <app-footer></app-footer>
@@ -18,7 +18,7 @@ import AppFooter from './components/AppFooter.vue'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  .page {
+  main {
     flex-grow: 1;
   }
 }

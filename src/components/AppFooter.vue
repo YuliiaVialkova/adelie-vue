@@ -7,10 +7,11 @@ import AppMenu from './AppMenu.vue'
 
 <template>
   <footer class="app-footer">
-    <div class="icon-wrap">
-      <IconFooterBg class="icon--footer-bg" />
-    </div>
     <AppInnerWrap class="footer-wrap">
+      <!-- <div class="icon-wrap">
+        <IconFooterBg class="icon--footer-bg" />
+      </div> -->
+
       <div class="body">
         <a href="/">
           <IconLogo class="logo" />
@@ -24,32 +25,37 @@ import AppMenu from './AppMenu.vue'
 
 <style lang="scss" scoped>
 .app-footer {
-  position: relative;
-  .icon-wrap {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    .icon--footer-bg {
+  .footer-wrap {
+    position: relative;
+    .icon-wrap {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
+      width: 100%;
+      overflow: visible;
+
+      .icon--footer-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -322px;
+        z-index: -1;
+      }
     }
   }
 
   .body {
-    padding-top: toRem(280);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    padding-top: toRem(113);
+    padding-bottom: toRem(45);
     color: var(--additional-color-text);
 
     @media (min-width: toEm(1024)) {
+      padding-top: toRem(230);
       flex-direction: row;
       justify-content: flex-start;
-      padding-bottom: toRem(90);
+      padding-bottom: toRem(70);
     }
 
     .logo {
@@ -72,9 +78,7 @@ import AppMenu from './AppMenu.vue'
       }
     }
     .footer-menu {
-      margin-bottom: toRem(45);
       @media (min-width: toEm(1024)) {
-        margin-bottom: 0;
         margin-left: toRem(145);
       }
     }
