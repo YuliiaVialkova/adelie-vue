@@ -20,18 +20,24 @@ import AppMenu from './AppMenu.vue'
 
 <style lang="scss" scoped>
 .app-footer {
-  height: toRem(351);
   background: url(../assests/images/design/footer-bg.svg) center / cover no-repeat;
-  .footer-wrap {
-    height: 100%;
-  }
+
   .body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+
     color: var(--additional-color-text);
     text-align: center;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      background: url(../assests/images/design/footer-wave.svg) 0 0 / cover no-repeat;
+
+      right: 0;
+    }
 
     .logo {
       width: toRem(139);

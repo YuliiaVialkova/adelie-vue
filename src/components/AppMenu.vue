@@ -32,10 +32,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    @media (min-width: toEm(768)) {
-      gap: clamp(toRem(30), 5vw, toRem(60));
-    }
+    justify-content: center;
+    gap: toRem(50);
   }
   .link {
     font-weight: 400;
