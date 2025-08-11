@@ -1,5 +1,5 @@
 <script setup>
-import AppInnerWrap from './AppInnerWrap.vue'
+import AppInnerWrap from './AppInnerHomePage.vue'
 import IconLogo from './icons/IconLogo.vue'
 import IconFooterBg from './icons/IconFooterBg.vue'
 import AppMenu from './AppMenu.vue'

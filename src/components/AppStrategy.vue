@@ -1,25 +1,21 @@
 <script setup></script>
 
 <template>
-  <section class="app-promo">
-    <div class="promo-container">
+  <section class="app-strategy">
+    <div class="container">
       <div class="text-content">
-        <h2>
-          Unlock the Power of
-          <span class="highlight">Optimal</span> <span class="highlight">Solutions</span>
-          for Your Business with Us!
-        </h2>
+        <h2><span class="highlight">Who will</span> do it for you?</h2>
         <p>
-          We specialize in delivering top-notch e-commerce development solutions tailored to meet
-          your unique business needs. With our extensive experience and deep understanding of the
-          ever-evolving online marketplace, we are committed to helping you achieve unprecedented
-          success.
+          Our team of skilled developers, designers, and strategists work collaboratively to create
+          user-friendly and visually stunning e-commerce platforms that captivate your customers and
+          drive conversions. Leveraging the latest technologies and industry best practices, we
+          ensure seamless integration, robust security, and optimal performance.
         </p>
       </div>
       <div class="img-wrap">
         <img
-          src="../assests/images/content/promo.svg"
-          alt="A man and woman sit in a chair, engaged in a conversation, both smiling and appearing relaxed."
+          src="../assests/images/content/strategy.svg"
+          alt="Black and white artwork showing a man and woman looking at a computer screen, illustrating a collaborative moment."
         />
       </div>
     </div>
@@ -27,40 +23,35 @@
 </template>
 
 <style lang="scss" scoped>
-.app-promo {
-  @media (min-width: toEm(1024)) {
-    margin-top: -61px;
-  }
-  @media (min-width: toEm(1280)) {
-    margin-top: toRem(-81);
-  }
-
-  .promo-container {
+.app-strategy {
+  .container {
     @media (min-width: toEm(1024)) {
       display: flex;
       flex-wrap: nowrap;
+      justify-content: space-between;
       align-items: center;
-      gap: toRem(20);
 
+      gap: toRem(44);
       margin-bottom: toRem(35);
+      padding-right: toRem(35);
     }
     .text-content {
       @media (min-width: toEm(1024)) {
-        width: 54%;
+        width: 56%;
         text-align: start;
       }
       h2 {
         font-size: clamp(toRem(35), 4vw, toRem(50));
         line-height: 1.58;
-        margin-bottom: toRem(16);
+        margin-bottom: toRem(30);
 
         @media (min-width: toEm(768)) {
           line-height: 1.4;
-          margin-bottom: toRem(25);
+          margin-bottom: toRem(30);
         }
       }
       p {
-        margin-bottom: toRem(33);
+        margin-bottom: toRem(25);
         @media (min-width: toEm(768)) {
           font-size: toRem(20);
           line-height: 1.75;
@@ -73,7 +64,7 @@
         text-align: center;
       }
       @media (min-width: toEm(1024)) {
-        width: 44%;
+        width: 41%;
       }
 
       img {

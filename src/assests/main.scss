@@ -2,6 +2,7 @@
 @use './vars.scss' as *;
 @use './mixins.scss' as *;
 @use './fonts.scss' as *;
+@use './components.scss' as *;
 
 #vue-inspector-container {
   display: none !important;

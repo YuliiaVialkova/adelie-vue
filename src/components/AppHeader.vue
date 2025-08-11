@@ -3,12 +3,12 @@ import IconLogo from './icons/IconLogo.vue'
 import IconSearch from './icons/IconSearch.vue'
 import AppMenu from './AppMenu.vue'
 import IconBurger from './icons/IconBurger.vue'
-import AppInnerWrap from './AppInnerWrap.vue'
+import AppInnerHomePage from './AppInnerHomePage.vue'
 </script>
 
 <template>
   <header class="app-header">
-    <AppInnerWrap>
+    <AppInnerHomePage>
       <div class="body">
         <a href="/" class="link">
           <IconLogo class="logo" />
@@ -21,7 +21,7 @@ import AppInnerWrap from './AppInnerWrap.vue'
         </div>
         <IconBurger class="burger-menu" />
       </div>
-    </AppInnerWrap>
+    </AppInnerHomePage>
   </header>
 </template>
 
@@ -38,6 +38,7 @@ import AppInnerWrap from './AppInnerWrap.vue'
     }
     @media (min-width: toEm(1024)) {
       padding-bottom: toRem(88);
+      padding-right: toRem(35);
     }
     & > .link {
       margin-right: auto;

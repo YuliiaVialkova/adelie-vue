@@ -21,6 +21,7 @@ export default defineConfig({
           @use "@/assests/vars.scss" as *;
           @use "@/assests/mixins.scss" as *;
           @use "@/assests/fonts.scss" as *;
+          @use '@/assests/components.scss' as *;
         `,
       },
     },

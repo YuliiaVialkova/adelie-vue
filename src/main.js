@@ -1,5 +1,5 @@
 import './assests/main.scss'
-import './stores/open-mobile-menu.js'
+import './stores/script.js'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

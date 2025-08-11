@@ -80,14 +80,19 @@ label {
 }
 
 :root {
-  --main-color-text: #000;
-  --highlight-color-text: #4cf049;
-  --text-underline-color: #4cf049;
-  --main-bg-icon: #000;
-  --main-color-icon: #000;
-  --main-hover-icon: #4cf049;
-  --main-bg: #fff;
-  --main-link-hover: #4cf049;
+  --light: #fff;
+  --dark: #000;
+  --design-color: #4cf049;
+  --main-color-text: var(--dark);
+  --additional-color-text: var(--light);
+  --highlight-color-text: var(--design-color);
+  --text-underline-color: var(--design-color);
+  --main-bg-icon: var(--dark);
+  --main-color-icon: var(--dark);
+  --additional-color-icon: var(--light);
+  --main-hover-icon: var(--design-color);
+  --main-bg: var(--light);
+  --main-link-hover: var(--design-color);
 }
 
 @font-face {

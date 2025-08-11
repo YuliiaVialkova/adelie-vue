@@ -6,15 +6,18 @@ import IconWavyLine1 from './icons/IconWavyLine1.vue'
   <section class="app-home-page-title">
     <h1><span>Adelie</span> E-commerce Solutions</h1>
     <p class="subtitle">Empower Your Online Business with Expert E-commerce Solutions</p>
-    <IconWavyLine1 />
+    <div class="icon-wrap">
+      <IconWavyLine1 class="decorative-icon" />
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-home-page-title {
   text-align: center;
-  padding-bottom: toRem(7);
-
+  @media (min-width: toEm(1024)) {
+    padding-right: toRem(35);
+  }
   h1 {
     font-size: clamp(toRem(38), 7vw, toRem(70));
     font-weight: 400;
@@ -30,8 +33,28 @@ import IconWavyLine1 from './icons/IconWavyLine1.vue'
     padding: 0 toRem(5);
     font-size: toRem(20);
     @media (min-width: toEm(768)) {
-      font-size: toRem(20);
+      font-size: toRem(25);
       line-height: 1.4;
+      padding: 0;
+    }
+  }
+  .icon-wrap {
+    line-height: 1;
+    font-size: 0;
+    width: 72%;
+    padding-left: toRem(10);
+    margin: 0 auto;
+
+    @media (min-width: toEm(768)) {
+      width: 62%;
+    }
+    @media (min-width: toEm(1024)) {
+      width: 52%;
+    }
+    .decorative-icon {
+      object-fit: contain;
+      height: auto;
+      max-width: 100%;
     }
   }
 }

@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .inner-wrap {
-  max-width: toRem(1296);
+  max-width: toRem(1332);
   margin: 0 auto;
   padding: 0 toRem(10);
 }
