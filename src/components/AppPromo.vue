@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import IconWavyLine2 from './icons/IconWavyLine2.vue'
+</script>
 
 <template>
   <section class="app-promo">
@@ -23,11 +25,14 @@
         />
       </div>
     </div>
+    <IconWavyLine2 class="decorative-icon" />
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-promo {
+  border: 1px solid transparent;
+  position: relative;
   @media (min-width: toEm(1024)) {
     margin-top: -61px;
   }
@@ -85,6 +90,15 @@
           margin-bottom: 0;
         }
       }
+    }
+  }
+  .decorative-icon {
+    display: none;
+    @media (min-width: toEm(1024)) {
+      display: block;
+      position: absolute;
+      bottom: -43%;
+      left: 41%;
     }
   }
 }

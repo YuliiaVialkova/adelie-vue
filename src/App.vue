@@ -18,6 +18,7 @@ import AppFooter from './components/AppFooter.vue'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
   main {
     flex-grow: 1;
   }
