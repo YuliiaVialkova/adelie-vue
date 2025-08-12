@@ -57,11 +57,11 @@ import IconWavyLine2 from './icons/IconWavyLine2.vue'
       h2 {
         font-size: clamp(toRem(35), 4vw, toRem(50));
         line-height: 1.58;
-        margin-bottom: toRem(16);
+        margin: toRem(15) 0;
 
         @media (min-width: toEm(768)) {
           line-height: 1.4;
-          margin-bottom: toRem(25);
+          margin: toRem(25) 0;
         }
       }
       p {
@@ -69,7 +69,7 @@ import IconWavyLine2 from './icons/IconWavyLine2.vue'
         @media (min-width: toEm(768)) {
           font-size: toRem(20);
           line-height: 1.75;
-          margin-bottom: toRem(25);
+          margin-bottom: toRem(60);
         }
       }
     }

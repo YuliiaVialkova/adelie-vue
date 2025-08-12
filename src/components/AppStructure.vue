@@ -1,3 +1,7 @@
+<script setup>
+import IconWavyLine3 from '../components/icons/IconWavyLine3.vue'
+</script>
+
 <template>
   <section class="app-structure">
     <div class="accordion">
@@ -101,11 +105,13 @@
         </div>
       </div>
     </div>
+    <IconWavyLine3 class="decorative-icon" />
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-structure {
+  position: relative;
   border: 1px solid transparent;
   .accordion {
     @media (min-width: toEm(1024)) {
@@ -122,12 +128,12 @@
         height: 466px;
         border: 1px solid rgba(0, 0, 0, 0.2);
         margin-left: 112px;
-
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        @media (min-width: toEm(1024)) {
+        }
         h3.accordion-clone {
           @media (min-width: toEm(1024)) {
             width: 321px;
@@ -177,8 +183,8 @@
           }
         }
         &.step-3 > .accordion-btn {
-          top: 34px;
-          left: 504px;
+          top: -6px;
+          left: 463px;
           flex-direction: row-reverse;
           justify-content: flex-end;
           align-items: center;
@@ -189,26 +195,74 @@
             padding-right: 0;
           }
         }
+
         &.step-4 > .accordion-btn {
-          top: 267px;
-          left: 542px;
-          flex-direction: row-reverse;
-          justify-content: flex-end;
-          align-items: center;
-          width: 193px;
-          h3 {
-            margin-left: 8px;
-            text-align: start;
-            padding-right: 0;
-          }
-        }
-        &.step-5 > .accordion-btn {
           top: 437px;
           left: 301px;
           flex-direction: column-reverse;
           width: 136px;
           h3 {
             margin-top: 6px;
+            text-align: right;
+          }
+        }
+        &.step-5 > .accordion-btn {
+          top: 371px;
+          left: 56px;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          width: 170px;
+          h3 {
+            margin-top: 8px;
+            text-align: end;
+            padding-right: 0;
+            margin-right: 28px;
+          }
+        }
+        &.step-6 > .accordion-btn {
+          top: 192px;
+          left: 45px;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          width: 131px;
+          h3 {
+            margin-left: 8px;
+            text-align: start;
+            padding-right: 0;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      @media (min-width: toEm(1280)) {
+        &.step-3 > .accordion-btn {
+          top: 34px;
+          left: 504px;
+        }
+        &.step-4 > .accordion-btn {
+          top: 262px;
+          left: 544px;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: center;
+          width: 190px;
+          h3 {
+            margin-left: 14px;
+            text-align: left;
+          }
+        }
+        &.step-5 > .accordion-btn {
+          top: 434px;
+          left: 263px;
+          flex-direction: column-reverse;
+          justify-content: flex-end;
+          align-items: end;
+          width: 173px;
+          h3 {
+            margin-right: 0;
             text-align: right;
           }
         }
@@ -226,17 +280,15 @@
             margin-right: 28px;
           }
         }
-        &:last-child {
-          border-bottom: none;
-        }
       }
 
       .accordion-btn {
-        padding: 30px 0;
+        padding: 27px 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-align: start;
         -webkit-tap-highlight-color: var(--highlight-color-btn);
         @media (min-width: toEm(1024)) {
           flex-direction: column;
@@ -281,8 +333,6 @@
         h3 {
           font-size: toRem(20);
           line-height: 1.25;
-          padding-right: 5px;
-          text-align: start;
           @media (min-width: toEm(1024)) {
             font-size: toRem(17);
             line-height: 1.47;
@@ -307,10 +357,19 @@
             position: relative;
             top: 0;
             left: 62%;
-
             width: 36%;
             font-size: toRem(20);
             line-height: 1.75;
+          }
+        }
+        @media (min-width: toEm(1280)) {
+          &.active {
+            left: 65%;
+          }
+        }
+        @media (min-width: toEm(1536)) {
+          &.active {
+            left: 62%;
           }
         }
         h4 {
@@ -329,6 +388,29 @@
           }
         }
       }
+    }
+  }
+  .decorative-icon {
+    margin-top: 20px;
+    width: 92%;
+    height: auto;
+    @media (min-width: toEm(600)) {
+      width: 70%;
+      display: block;
+      margin: 20px auto 0;
+    }
+    @media (min-width: toEm(768)) {
+      width: 60%;
+    }
+    @media (min-width: toEm(1024)) {
+      position: absolute;
+      bottom: -88px;
+      width: 44%;
+      left: -213px;
+    }
+    @media (min-width: toEm(1280)) {
+      bottom: -163px;
+      left: -287px;
     }
   }
 }

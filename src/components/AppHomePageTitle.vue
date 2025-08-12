@@ -41,8 +41,7 @@ import IconWavyLine1 from './icons/IconWavyLine1.vue'
   .icon-wrap {
     line-height: 1;
     font-size: 0;
-    width: 72%;
-    padding-left: toRem(10);
+    width: 76%;
     margin: 0 auto;
 
     @media (min-width: toEm(768)) {

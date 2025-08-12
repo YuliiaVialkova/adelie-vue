@@ -41,13 +41,12 @@
         text-align: start;
       }
       h2 {
-        font-size: clamp(toRem(35), 4vw, toRem(50));
-        line-height: 1.58;
-        margin-bottom: toRem(30);
+        font-size: clamp(toRem(35), 6vw, toRem(50));
+        line-height: 1.4285;
+        margin-bottom: toRem(20);
 
         @media (min-width: toEm(768)) {
-          line-height: 1.4;
-          margin-bottom: toRem(30);
+          margin-bottom: 30px;
         }
       }
       p {
@@ -55,7 +54,7 @@
         @media (min-width: toEm(768)) {
           font-size: toRem(20);
           line-height: 1.75;
-          margin-bottom: toRem(58);
+          margin-bottom: toRem(65);
         }
       }
     }
