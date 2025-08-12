@@ -55,7 +55,7 @@
         @media (min-width: toEm(768)) {
           font-size: toRem(20);
           line-height: 1.75;
-          margin-bottom: toRem(25);
+          margin-bottom: toRem(58);
         }
       }
     }

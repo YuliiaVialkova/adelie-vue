@@ -20,16 +20,17 @@ function documentAction(e) {
   if (!btnAccordion) return
 
   const accordionItem = btnAccordion.closest('.accordion-item')
+  if (!accordionItem) return
+
   const accordionContent = accordionItem.querySelector('.accordion-content')
 
-  const isActive = btnAccordion.classList.contains('active')
   const isDesktop = window.innerWidth > 1024
 
   if (isDesktop) {
     //desktop
 
     //if you click on the same active button, we do nothing
-    if (isActive) return
+    if (btnAccordion.classList.contains('active')) return
 
     // Remove active from all buttons
     document.querySelectorAll('.accordion-btn').forEach((btn) => {
@@ -51,7 +52,7 @@ function documentAction(e) {
     cloneAndInsertH3(btnAccordion)
   } else {
     //mobile
-    if (isActive) {
+    if (btnAccordion.classList.contains('active')) {
       //If you click on an open one, close it
       btnAccordion.classList.remove('active')
       accordionContent.classList.remove('active')
@@ -86,9 +87,11 @@ function showCloneForActiveButton() {
 }
 function cloneAndInsertH3(button) {
   const h3 = button.querySelector('h3')
+  const accordion = button.closest('.accordion')
+  const circle = accordion.querySelector('.circle')
   if (h3) {
     const h3Clone = h3.cloneNode(true)
     h3Clone.classList.add('accordion-clone')
-    button.insertAdjacentElement('afterend', h3Clone)
+    circle.insertAdjacentElement('afterbegin', h3Clone)
   }
 }

@@ -41,11 +41,6 @@
   }
   .link {
     font-weight: 400;
-    @media (any-hover: hover) and (any-pointer: fine) {
-      &:hover {
-        color: var(--main-link-hover);
-      }
-    }
   }
   &.header-menu .link {
     font-size: toRem(28);
@@ -56,6 +51,11 @@
       font-size: toRem(20);
       line-height: 1.15;
       color: var(--main-color-text);
+    }
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        color: var(--main-link-hover);
+      }
     }
   }
   &.footer-menu .link {
