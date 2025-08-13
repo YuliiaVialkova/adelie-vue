@@ -24,6 +24,7 @@
 
 <style lang="scss" scoped>
 .app-strategy {
+  border: 1px solid transparent;
   .container {
     @media (min-width: toEm(1024)) {
       display: flex;
@@ -67,7 +68,7 @@
       }
 
       img {
-        margin-bottom: toRem(51);
+        margin-bottom: toRem(3);
         @media (min-width: toEm(1024)) {
           width: 100%;
           height: auto;
