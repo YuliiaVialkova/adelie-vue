@@ -1,25 +1,90 @@
-<script setup></script>
+<script setup>
+import { reactive } from 'vue'
+
+const formData = reactive({
+  name: '',
+  phone: '',
+  email: '',
+  message: '',
+})
+
+const errors = reactive({
+  name: '',
+  phone: '',
+  email: '',
+  message: '',
+})
+
+function validateForm() {
+  errors.name = ''
+  errors.phone = ''
+  errors.email = ''
+  errors.message = ''
+
+  if (formData.name.trim().length < 2) {
+    errors.name = 'Name must be at least 2 characters long.'
+  }
+
+  if (!/^\+?[0-9]{10,15}$/.test(formData.phone.trim())) {
+    errors.phone = 'Please enter a valid phone number.'
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+    errors.email = 'Please enter a valid email address.'
+  }
+
+  if (formData.message.trim().length < 5) {
+    errors.message = 'Message must be at least 5 characters'
+  }
+
+  if (!errors.name && !errors.phone && !errors.email && !errors.message) {
+    console.log('Form submitted:', formData)
+    alert('Form successfully submitted!')
+  }
+}
+</script>
 
 <template>
   <section class="app-contact-form">
     <div class="content">
       <h2>Contact form</h2>
-      <form action="">
+      <form @submit.prevent="validateForm" novalidate>
         <label class="label-name"
           >Name
-          <input type="text" name="user-name" />
+          <input
+            type="text"
+            v-model="formData.name"
+            name="user-name"
+            :class="{ invalid: errors.name }"
+          />
+          <span class="error" v-if="errors.name">{{ errors.name }}</span>
         </label>
         <label class="label-phone"
           >Phone
-          <input type="phone" name="user-phone" />
+          <input
+            type="phone"
+            v-model="formData.phone"
+            name="user-phone"
+            :class="{ invalid: errors.phone }"
+          /><span class="error" v-if="errors.phone">{{ errors.phone }}</span>
         </label>
         <label class="label-email"
           >E-mail
-          <input type="email" name="user-email" />
+          <input
+            type="email"
+            v-model="formData.email"
+            name="user-email"
+            :class="{ invalid: errors.email }"
+          /><span class="error">{{ errors.email }}</span>
         </label>
         <label class="label-message">
           Text
-          <textarea name="user-message"></textarea>
+          <textarea
+            name="user-message"
+            v-model="formData.message"
+            :class="{ invalid: errors.message }"
+          ></textarea
+          ><span class="error">{{ errors.message }}</span>
         </label>
         <button type="submit">Send</button>
       </form>
@@ -90,9 +155,34 @@
 
         display: flex;
         align-items: flex-end;
-        padding: 28px 0 20px 0;
+        padding: 28px 0 27px 0;
+
+        position: relative;
         @media (min-width: toEm(1024)) {
-          padding: 56px 0 20px 0;
+          padding: 56px 0 27px 0;
+        }
+        input,
+        textarea {
+          padding-left: 15px;
+          outline: none;
+          border-bottom: 1px solid transparent;
+          transition: border 0.3s;
+        }
+
+        textarea:focus,
+        input:focus {
+          border-bottom-color: var(--design-color);
+        }
+        .error {
+          color: red;
+          font-size: 1rem;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .invalid {
+          border-color: red;
         }
       }
       .label-name {
@@ -115,7 +205,7 @@
           flex-basis: 100%;
         }
         @media (min-width: toEm(1280)) {
-          padding: 0 0 20px 0;
+          padding: 0 0 27px 0;
         }
       }
       button {
