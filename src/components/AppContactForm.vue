@@ -94,7 +94,9 @@ function validateForm() {
 
 <style lang="scss" scoped>
 .app-contact-form {
+  border: 1px solid transparent;
   .content {
+    margin-bottom: 183px;
     @media (min-width: toEm(1024)) {
       margin: 80px 0 0 0;
     }
