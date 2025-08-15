@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import IconCircle from './icons/IconCircle.vue'
+</script>
 
 <template>
   <section class="app-strategy">
-    <div class="container">
+    <AppInnerHomePage class="container">
       <div class="text-content">
         <h2><span class="highlight">Who will</span> do it for you?</h2>
         <p>
@@ -17,8 +20,10 @@
           src="../assests/images/content/strategy.svg"
           alt="Black and white artwork showing a man and woman looking at a computer screen, illustrating a collaborative moment."
         />
+        <IconCircle class="decorative-icon circle" :stroke-width="5" :size="26" />
       </div>
-    </div>
+      <IconCircle class="decorative-icon circle" :stroke-width="10" :size="51" />
+    </AppInnerHomePage>
   </section>
 </template>
 
@@ -26,15 +31,16 @@
 .app-strategy {
   border: 1px solid transparent;
   .container {
+    position: relative;
     @media (min-width: toEm(1024)) {
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
 
-      gap: toRem(44);
+      gap: toRem(42);
       margin-bottom: toRem(35);
-      padding-right: toRem(35);
+      padding-right: toRem(43);
     }
     .text-content {
       @media (min-width: toEm(1024)) {
@@ -47,7 +53,7 @@
         margin-bottom: toRem(20);
 
         @media (min-width: toEm(768)) {
-          margin-bottom: 30px;
+          margin-bottom: toRem(23);
         }
       }
       p {
@@ -60,6 +66,7 @@
       }
     }
     .img-wrap {
+      position: relative;
       @media (min-width: toEm(540)) {
         text-align: center;
       }
@@ -75,6 +82,26 @@
           object-fit: contain;
           margin-bottom: 0;
         }
+      }
+      .decorative-icon.circle {
+        display: block;
+        position: absolute;
+        top: 7%;
+        left: 0%;
+
+        @media (min-width: toEm(1024)) {
+          display: none;
+        }
+      }
+    }
+    .decorative-icon.circle {
+      display: none;
+      @media (min-width: toEm(1024)) {
+        display: block;
+        position: absolute;
+        bottom: -4%;
+        left: -13%;
+        visibility: visible;
       }
     }
   }

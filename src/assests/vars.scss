@@ -1,6 +1,6 @@
 :root {
   --light: #fff;
-  --dark: #000;
+  --dark: hwb(0 0% 100%);
   --design-color: #4cf049;
   --main-color-text: var(--dark);
   --additional-color-text: var(--light);
@@ -18,4 +18,6 @@
   --main-bg: var(--light);
   --design-bg: rgb(76, 240, 73, 0.1);
   --main-link-hover: var(--design-color);
+
+  --accordion-main-border: rgba(0, 0, 0, 0.11);
 }

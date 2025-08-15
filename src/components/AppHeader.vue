@@ -4,12 +4,15 @@ import IconSearch from './icons/IconSearch.vue'
 import AppMenu from './AppMenu.vue'
 import IconBurger from './icons/IconBurger.vue'
 import AppInnerHomePage from './AppInnerHomePage.vue'
+import IconHeaderWave from './icons/IconHeaderWave.vue'
+import IconCircle from './icons/IconCircle.vue'
 </script>
 
 <template>
   <header class="app-header">
     <AppInnerHomePage>
       <div class="body">
+        <IconHeaderWave class="icon-header-wave" />
         <a href="/" class="link">
           <IconLogo class="logo" />
         </a>
@@ -20,6 +23,7 @@ import AppInnerHomePage from './AppInnerHomePage.vue'
           </a>
         </div>
         <IconBurger class="burger-menu" />
+        <IconCircle class="decorative-icon circle" :stroke-width="20" :size="199" />
       </div>
     </AppInnerHomePage>
   </header>
@@ -31,14 +35,38 @@ import AppInnerHomePage from './AppInnerHomePage.vue'
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     gap: toRem(22);
     padding: toRem(20) 0 toRem(35) toRem(20);
     @media (min-width: toEm(600)) {
       padding-bottom: toRem(50);
     }
     @media (min-width: toEm(1024)) {
-      padding-bottom: toRem(88);
-      padding-right: toRem(35);
+      padding: toRem(20) toRem(35) toRem(88) 0;
+    }
+    .icon-header-wave {
+      position: absolute;
+      width: 189px;
+      height: 120px;
+      top: -26px;
+      left: -71px;
+      @media (min-width: toEm(1024)) {
+        width: auto;
+        height: auto;
+        top: 0;
+        left: -324px;
+        visibility: visible;
+      }
+    }
+    .decorative-icon.circle {
+      display: none;
+      @media (min-width: toEm(1024)) {
+        display: block;
+        position: absolute;
+        top: -75px;
+        right: -338px;
+        visibility: visible;
+      }
     }
     & > .link {
       margin-right: auto;
@@ -80,7 +108,7 @@ import AppInnerHomePage from './AppInnerHomePage.vue'
       display: flex;
       gap: toRem(20);
       @media (min-width: toEm(768)) {
-        margin-left: clamp(toRem(22), 7vw, toRem(92));
+        margin-left: clamp(toRem(22), 7vw, toRem(70));
       }
       & > .link {
         font-size: 0;

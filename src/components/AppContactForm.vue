@@ -1,4 +1,5 @@
 <script setup>
+import AppInnerHomePage from '../components/AppInnerHomePage.vue'
 import { reactive } from 'vue'
 
 const formData = reactive({
@@ -46,49 +47,51 @@ function validateForm() {
 
 <template>
   <section class="app-contact-form">
-    <div class="content">
-      <h2>Contact form</h2>
-      <form @submit.prevent="validateForm" novalidate>
-        <label class="label-name"
-          >Name
-          <input
-            type="text"
-            v-model="formData.name"
-            name="user-name"
-            :class="{ invalid: errors.name }"
-          />
-          <span class="error" v-if="errors.name">{{ errors.name }}</span>
-        </label>
-        <label class="label-phone"
-          >Phone
-          <input
-            type="phone"
-            v-model="formData.phone"
-            name="user-phone"
-            :class="{ invalid: errors.phone }"
-          /><span class="error" v-if="errors.phone">{{ errors.phone }}</span>
-        </label>
-        <label class="label-email"
-          >E-mail
-          <input
-            type="email"
-            v-model="formData.email"
-            name="user-email"
-            :class="{ invalid: errors.email }"
-          /><span class="error">{{ errors.email }}</span>
-        </label>
-        <label class="label-message">
-          Text
-          <textarea
-            name="user-message"
-            v-model="formData.message"
-            :class="{ invalid: errors.message }"
-          ></textarea
-          ><span class="error">{{ errors.message }}</span>
-        </label>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+    <AppInnerHomePage>
+      <div class="content">
+        <h2>Contact form</h2>
+        <form @submit.prevent="validateForm" novalidate>
+          <label class="label-name"
+            >Name
+            <input
+              type="text"
+              v-model="formData.name"
+              name="user-name"
+              :class="{ invalid: errors.name }"
+            />
+            <span class="error" v-if="errors.name">{{ errors.name }}</span>
+          </label>
+          <label class="label-phone"
+            >Phone
+            <input
+              type="phone"
+              v-model="formData.phone"
+              name="user-phone"
+              :class="{ invalid: errors.phone }"
+            /><span class="error" v-if="errors.phone">{{ errors.phone }}</span>
+          </label>
+          <label class="label-email"
+            >E-mail
+            <input
+              type="email"
+              v-model="formData.email"
+              name="user-email"
+              :class="{ invalid: errors.email }"
+            /><span class="error">{{ errors.email }}</span>
+          </label>
+          <label class="label-message">
+            Text
+            <textarea
+              name="user-message"
+              v-model="formData.message"
+              :class="{ invalid: errors.message }"
+            ></textarea
+            ><span class="error">{{ errors.message }}</span>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </AppInnerHomePage>
   </section>
 </template>
 
@@ -161,7 +164,7 @@ function validateForm() {
 
         position: relative;
         @media (min-width: toEm(1024)) {
-          padding: 56px 0 27px 0;
+          padding: 53px 0 27px 0;
         }
         input,
         textarea {

@@ -83,7 +83,7 @@ import AppMenu from './AppMenu.vue'
       color: var(--additional-color-text);
 
       @media (min-width: toEm(1024)) {
-        padding-top: 269px;
+        padding-top: 262px;
         flex-direction: row;
         justify-content: flex-start;
         padding-bottom: 75px;
