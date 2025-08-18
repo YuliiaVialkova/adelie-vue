@@ -6,7 +6,14 @@ import IconBurger from './icons/IconBurger.vue'
 import AppInnerHomePage from './AppInnerHomePage.vue'
 import IconHeaderWave from './icons/IconHeaderWave.vue'
 import IconCircle from './icons/IconCircle.vue'
+import PlusIcon from './icons/PlusIcon.vue'
 </script>
+
+<!-- <PlusIcon class="visible-on-desktop" top="0%" left="0%" />
+        <PlusIcon class="visible-on-desktop" top="0%" right="0%" />
+       
+        <PlusIcon class="visible-on-desktop" bottom="0%" left="0%" /> 
+        <PlusIcon class="visible-on-desktop" bottom="0%" right="0%" /> -->
 
 <template>
   <header class="app-header">
@@ -23,7 +30,11 @@ import IconCircle from './icons/IconCircle.vue'
           </a>
         </div>
         <IconBurger class="burger-menu" />
-        <IconCircle class="decorative-icon circle" :stroke-width="20" :size="199" />
+        <IconCircle class="decorative-icon circle" :stroke-width="20" :size="260" />
+        <PlusIcon class="visible-on-desktop" top="38%" left="23%" />
+        <PlusIcon class="visible-on-desktop" top="81%" right="45%" />
+        <PlusIcon class="visible-on-desktop" top="37%" right="-14%" />
+        <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" />
       </div>
     </AppInnerHomePage>
   </header>
@@ -63,8 +74,8 @@ import IconCircle from './icons/IconCircle.vue'
       @media (min-width: toEm(1024)) {
         display: block;
         position: absolute;
-        top: -75px;
-        right: -338px;
+        top: -84px;
+        right: -332px;
         visibility: visible;
       }
     }

@@ -2,22 +2,25 @@
 import IconWavyLine1 from './icons/IconWavyLine1.vue'
 import IconRainLeft from './icons/IconRainLeft.vue'
 import IconRainRight from './icons/IconRainRight.vue'
-import IconDecoratedBlock from './icons/IconDecoratedBlock.vue'
+import PlusIcon from './icons/PlusIcon.vue'
 import AppInnerHomePage from '../components/AppInnerHomePage.vue'
 </script>
 
 <template>
   <section class="app-home-page-title">
     <AppInnerHomePage class="container">
-      <IconDecoratedBlock before-x="-7%" before-y="53%" after-x="64%" after-y="1%">
-        <h1><span>Adelie</span> E-commerce Solutions</h1>
-        <IconRainLeft class="decorative-icon-rain left" />
-        <IconRainRight class="decorative-icon-rain right" />
-        <p class="subtitle">Empower Your Online Business with Expert E-commerce Solutions</p>
-        <div class="icon-wrap">
-          <IconWavyLine1 class="decorative-icon" />
-        </div>
-      </IconDecoratedBlock>
+      <h1><span>Adelie</span> E-commerce Solutions</h1>
+      <IconRainLeft class="decorative-icon-rain left" />
+      <IconRainRight class="decorative-icon-rain right" />
+      <p class="subtitle">Empower Your Online Business with Expert E-commerce Solutions</p>
+      <div class="icon-wrap">
+        <IconWavyLine1 class="decorative-icon" />
+      </div>
+      <PlusIcon class="visible-on-desktop" bottom="44%" left="-19%" />
+      <PlusIcon class="visible-on-desktop" bottom="34%" left="7%" />
+      <PlusIcon class="visible-on-desktop" bottom="38%" right="3%" />
+      <PlusIcon class="visible-on-desktop" bottom="21%" right="48%" />
+      <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" />
     </AppInnerHomePage>
   </section>
 </template>
@@ -26,18 +29,19 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
 .app-home-page-title {
   .container {
     text-align: center;
-
+    position: relative;
     @media (min-width: toEm(1024)) {
       padding-right: toRem(35);
-      position: relative;
     }
+
     h1 {
       font-size: clamp(toRem(38), 7vw, toRem(70));
       font-weight: 400;
       line-height: 1.15;
-      margin-bottom: toRem(22);
+      margin-top: 1px;
+      margin-bottom: toRem(24);
       @media (min-width: toEm(1024)) {
-        margin-bottom: toRem(19);
+        margin-bottom: toRem(16);
       }
 
       span {
@@ -50,7 +54,7 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
         display: block;
         position: absolute;
         top: -10px;
-        left: -37px;
+        left: -38px;
       }
     }
     .decorative-icon-rain.right {
@@ -59,17 +63,18 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
         display: block;
         position: absolute;
         top: 0;
-        right: 8px;
+        right: 6px;
       }
     }
     .subtitle {
-      margin-bottom: toRem(20);
+      margin-bottom: toRem(17);
       padding: 0 toRem(5);
       font-size: toRem(20);
       @media (min-width: toEm(768)) {
         font-size: toRem(25);
         line-height: 1.4;
         padding: 0;
+        margin-bottom: toRem(25);
       }
     }
     .icon-wrap {
@@ -84,6 +89,7 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
       @media (min-width: toEm(1024)) {
         width: 52%;
       }
+
       .decorative-icon {
         object-fit: contain;
         height: auto;

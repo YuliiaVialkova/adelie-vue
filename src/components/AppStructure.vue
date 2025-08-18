@@ -128,6 +128,7 @@ import IconThreeLines from './icons/IconThreeLines.vue'
         margin: 136px 0 205px;
         border: 1px solid transparent;
       }
+
       .circle {
         @media (min-width: toEm(1024)) {
           position: relative;
@@ -419,7 +420,7 @@ import IconThreeLines from './icons/IconThreeLines.vue'
       }
       @media (min-width: toEm(1280)) {
         bottom: -163px;
-        left: -287px;
+        left: -276px;
       }
     }
     .decorative-icon.circle {
@@ -428,7 +429,7 @@ import IconThreeLines from './icons/IconThreeLines.vue'
         display: block;
         position: absolute;
         bottom: 11%;
-        right: 25%;
+        right: 24%;
       }
     }
     .decorative-icon.three-lines {
