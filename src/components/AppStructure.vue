@@ -3,6 +3,7 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
 import IconWavyLine3 from '../components/icons/IconWavyLine3.vue'
 import IconCircle from './icons/IconCircle.vue'
 import IconThreeLines from './icons/IconThreeLines.vue'
+import PlusIcon from './icons/PlusIcon.vue'
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import IconThreeLines from './icons/IconThreeLines.vue'
       <div class="accordion">
         <div class="circle"></div>
         <div class="accordion-item step-1">
-          <button class="accordion-btn active">
+          <button class="accordion-btn">
             <h3>Discovery and Planning</h3>
           </button>
           <div class="accordion-content">
@@ -113,6 +114,17 @@ import IconThreeLines from './icons/IconThreeLines.vue'
 
       <IconCircle class="decorative-icon circle" :stroke-width="5" :size="30" />
       <IconThreeLines class="decorative-icon three-lines" />
+      <PlusIcon class="visible-on-desktop" top="36%" left="-20%" />
+      <PlusIcon class="visible-on-desktop" bottom="19%" left="-3%" />
+      <PlusIcon class="visible-on-desktop" bottom="22%" left="47%" />
+      <PlusIcon class="visible-on-desktop" bottom="12%" right="7%" />
+      <PlusIcon class="visible-on-desktop" bottom="50%" right="-13%" />
+
+      <PlusIcon class="visible-on-mobile" top="12%" left="14%" />
+      <PlusIcon class="visible-on-mobile" bottom="40%" right="29%" />
+      <PlusIcon class="visible-on-mobile" bottom="5%" left="5%" />
+      <PlusIcon class="visible-on-mobile" bottom="2%" right="7%" />
+      <PlusIcon class="visible-on-mobile" bottom="17%" right="43%" />
     </AppInnerHomePage>
   </section>
 </template>

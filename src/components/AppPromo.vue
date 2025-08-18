@@ -45,7 +45,8 @@ import PlusIcon from './icons/PlusIcon.vue'
       <PlusIcon class="visible-on-desktop" bottom="28%" right="0%" />
       <PlusIcon class="visible-on-desktop" bottom="33%" right="-13%" />
 
-      <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" />
+      <PlusIcon class="visible-on-mobile" bottom="3%" right="10%" />
+      <PlusIcon class="visible-on-mobile" bottom="44%" left="13%" />
     </AppInnerHomePage>
   </section>
 </template>

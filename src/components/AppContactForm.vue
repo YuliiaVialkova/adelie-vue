@@ -1,5 +1,7 @@
 <script setup>
 import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import PlusIcon from './icons/PlusIcon.vue'
+
 import { reactive } from 'vue'
 
 const formData = reactive({
@@ -90,6 +92,13 @@ function validateForm() {
           </label>
           <button type="submit">Send</button>
         </form>
+        <PlusIcon class="visible-on-desktop" top="-9%" left="33%" />
+        <PlusIcon class="visible-on-desktop" top="-7%" right="36%" />
+        <PlusIcon class="visible-on-desktop" bottom="46%" left="-16%" />
+        <PlusIcon class="visible-on-desktop" bottom="-9%" left="35%" />
+
+        <PlusIcon class="visible-on-mobile" top="4%" right="7%" />
+        <PlusIcon class="visible-on-mobile" bottom="5%" right="52%" />
       </div>
     </AppInnerHomePage>
   </section>
@@ -99,6 +108,7 @@ function validateForm() {
 .app-contact-form {
   border: 1px solid transparent;
   .content {
+    position: relative;
     margin-bottom: 183px;
     @media (min-width: toEm(1024)) {
       margin: 80px 0 0 0;

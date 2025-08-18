@@ -9,11 +9,16 @@ import IconCircle from './icons/IconCircle.vue'
 import PlusIcon from './icons/PlusIcon.vue'
 </script>
 
-<!-- <PlusIcon class="visible-on-desktop" top="0%" left="0%" />
-        <PlusIcon class="visible-on-desktop" top="0%" right="0%" />
-       
-        <PlusIcon class="visible-on-desktop" bottom="0%" left="0%" /> 
-        <PlusIcon class="visible-on-desktop" bottom="0%" right="0%" /> -->
+<!-- 
+
+
+        <PlusIcon class="visible-on-mobile" top="0%" left="0%" />
+        <PlusIcon class="visible-on-mobile" top="0%" right="0%" /> 
+        <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" /> 
+        <PlusIcon class="visible-on-mobile" bottom="0%" right="0%" /> 
+        
+        
+        -->
 
 <template>
   <header class="app-header">
@@ -34,7 +39,7 @@ import PlusIcon from './icons/PlusIcon.vue'
         <PlusIcon class="visible-on-desktop" top="38%" left="23%" />
         <PlusIcon class="visible-on-desktop" top="81%" right="45%" />
         <PlusIcon class="visible-on-desktop" top="37%" right="-14%" />
-        <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" />
+        <PlusIcon class="visible-on-mobile" bottom="11%" left="53%" />
       </div>
     </AppInnerHomePage>
   </header>

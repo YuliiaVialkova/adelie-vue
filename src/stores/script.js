@@ -2,6 +2,14 @@ window.addEventListener('load', windowLoad)
 
 function windowLoad() {
   if (window.innerWidth > 1024) {
+    const accordionFirstItem = document.querySelector('.accordion-item.step-1')
+    if (accordionFirstItem) {
+      const accordionFirstButton = accordionFirstItem.querySelector('.accordion-btn')
+      if (accordionFirstButton) {
+        accordionFirstButton.classList.add('active')
+      }
+    }
+
     showCloneForActiveButton()
   }
   document.addEventListener('click', documentAction)
@@ -52,20 +60,19 @@ function documentAction(e) {
     cloneAndInsertH3(btnAccordion)
   } else {
     //mobile
-    if (btnAccordion.classList.contains('active')) {
-      //If you click on an open one, close it
-      btnAccordion.classList.remove('active')
-      accordionContent.classList.remove('active')
-    } else {
-      //closed all others
-      document.querySelectorAll('.accordion-btn').forEach((btn) => {
-        btn.classList.remove('active')
-      })
 
-      document.querySelectorAll('.accordion-content').forEach((content) => {
-        content.classList.remove('active')
-      })
-      //open new one
+    const isAlreadyActive = btnAccordion.classList.contains('active')
+
+    // Знімаємо active з усіх
+    document.querySelectorAll('.accordion-btn').forEach((btn) => {
+      btn.classList.remove('active')
+    })
+    document.querySelectorAll('.accordion-content').forEach((content) => {
+      content.classList.remove('active')
+    })
+    document.querySelectorAll('.accordion-clone').forEach((clone) => clone.remove())
+
+    if (!isAlreadyActive) {
       btnAccordion.classList.add('active')
       accordionContent.classList.add('active')
     }
@@ -85,6 +92,7 @@ function showCloneForActiveButton() {
     accordionContent.classList.add('active')
   }
 }
+
 function cloneAndInsertH3(button) {
   const h3 = button.querySelector('h3')
   const accordion = button.closest('.accordion')

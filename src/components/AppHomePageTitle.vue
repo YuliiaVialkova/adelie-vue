@@ -20,7 +20,8 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
       <PlusIcon class="visible-on-desktop" bottom="34%" left="7%" />
       <PlusIcon class="visible-on-desktop" bottom="38%" right="3%" />
       <PlusIcon class="visible-on-desktop" bottom="21%" right="48%" />
-      <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" />
+      <PlusIcon class="visible-on-mobile" bottom="9%" left="25%" />
+      <PlusIcon class="visible-on-mobile" bottom="33%" right="3%" />
     </AppInnerHomePage>
   </section>
 </template>

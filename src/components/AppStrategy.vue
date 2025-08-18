@@ -1,6 +1,7 @@
 <script setup>
 import AppInnerHomePage from '../components/AppInnerHomePage.vue'
 import IconCircle from './icons/IconCircle.vue'
+import PlusIcon from './icons/PlusIcon.vue'
 </script>
 
 <template>
@@ -23,6 +24,15 @@ import IconCircle from './icons/IconCircle.vue'
         <IconCircle class="decorative-icon circle" :stroke-width="5" :size="26" />
       </div>
       <IconCircle class="decorative-icon circle" :stroke-width="10" :size="51" />
+      <PlusIcon class="visible-on-desktop" top="-7%" right="-17%" />
+      <PlusIcon class="visible-on-desktop" bottom="38%" right="-12%" />
+      <PlusIcon class="visible-on-desktop" top="10%" left="54%" />
+      <PlusIcon class="visible-on-desktop" bottom="42%" left="-18%" />
+      <PlusIcon class="visible-on-desktop" bottom="4%" left="7%" />
+      <PlusIcon class="visible-on-desktop" bottom="15%" left="42%" />
+
+      <PlusIcon class="visible-on-mobile" bottom="44%" right="29%" />
+      <PlusIcon class="visible-on-mobile" bottom="2%" left="9%" />
     </AppInnerHomePage>
   </section>
 </template>
