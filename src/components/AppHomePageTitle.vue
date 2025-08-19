@@ -3,12 +3,12 @@ import IconWavyLine1 from './icons/IconWavyLine1.vue'
 import IconRainLeft from './icons/IconRainLeft.vue'
 import IconRainRight from './icons/IconRainRight.vue'
 import PlusIcon from './icons/PlusIcon.vue'
-import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 </script>
 
 <template>
   <section class="app-home-page-title">
-    <AppInnerHomePage class="container">
+    <AppContainer class="wrap container--big">
       <h1><span>Adelie</span> E-commerce Solutions</h1>
       <IconRainLeft class="decorative-icon-rain left" />
       <IconRainRight class="decorative-icon-rain right" />
@@ -22,13 +22,13 @@ import AppInnerHomePage from '../components/AppInnerHomePage.vue'
       <PlusIcon class="visible-on-desktop" bottom="21%" right="48%" />
       <PlusIcon class="visible-on-mobile" bottom="9%" left="25%" />
       <PlusIcon class="visible-on-mobile" bottom="33%" right="3%" />
-    </AppInnerHomePage>
+    </AppContainer>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-home-page-title {
-  .container {
+  .wrap {
     text-align: center;
     position: relative;
     @media (min-width: toEm(1024)) {

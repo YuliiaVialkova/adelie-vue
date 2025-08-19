@@ -1,5 +1,5 @@
 <script setup>
-import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 import IconWavyLine3 from '../components/icons/IconWavyLine3.vue'
 import IconCircle from './icons/IconCircle.vue'
 import IconThreeLines from './icons/IconThreeLines.vue'
@@ -8,7 +8,7 @@ import PlusIcon from './icons/PlusIcon.vue'
 
 <template>
   <section class="app-structure">
-    <AppInnerHomePage class="container">
+    <AppContainer class="wrap container--big">
       <div class="accordion">
         <div class="circle"></div>
         <div class="accordion-item step-1">
@@ -125,19 +125,19 @@ import PlusIcon from './icons/PlusIcon.vue'
       <PlusIcon class="visible-on-mobile" bottom="5%" left="5%" />
       <PlusIcon class="visible-on-mobile" bottom="2%" right="7%" />
       <PlusIcon class="visible-on-mobile" bottom="17%" right="43%" />
-    </AppInnerHomePage>
+    </AppContainer>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-structure {
-  .container {
+  .wrap {
     position: relative;
     border: 1px solid transparent;
     .accordion {
       @media (min-width: toEm(1024)) {
         position: relative;
-        margin: 136px 0 205px;
+        margin: toRem(136) 0 toRem(205);
         border: 1px solid transparent;
       }
 
@@ -169,7 +169,7 @@ import PlusIcon from './icons/PlusIcon.vue'
               justify-content: center;
               border-radius: 50%;
               background-color: var(--design-bg);
-              padding: 48px;
+              padding: toRem(48);
             }
           }
         }
@@ -192,7 +192,7 @@ import PlusIcon from './icons/PlusIcon.vue'
             left: -5px;
             h3 {
               text-align: end;
-              margin-bottom: 12px;
+              margin-bottom: toRem(12);
             }
           }
           &.step-2 > .accordion-btn {
@@ -200,7 +200,7 @@ import PlusIcon from './icons/PlusIcon.vue'
             left: 172px;
             h3 {
               text-align: end;
-              margin-bottom: 7px;
+              margin-bottom: toRem(7);
               padding-right: 0;
             }
           }
@@ -212,7 +212,7 @@ import PlusIcon from './icons/PlusIcon.vue'
             align-items: center;
             width: 220px;
             h3 {
-              margin-left: 14px;
+              margin-left: toRem(14);
               text-align: start;
               padding-right: 0;
             }
@@ -224,7 +224,7 @@ import PlusIcon from './icons/PlusIcon.vue'
             flex-direction: column-reverse;
             width: 136px;
             h3 {
-              margin-top: 6px;
+              margin-top: toRem(6);
               text-align: right;
             }
           }
@@ -239,7 +239,7 @@ import PlusIcon from './icons/PlusIcon.vue'
               margin-top: 8px;
               text-align: end;
               padding-right: 0;
-              margin-right: 28px;
+              margin-right: toRem(28);
             }
           }
           &.step-6 > .accordion-btn {
@@ -250,7 +250,7 @@ import PlusIcon from './icons/PlusIcon.vue'
             align-items: center;
             width: 131px;
             h3 {
-              margin-left: 8px;
+              margin-left: toRem(8);
               text-align: start;
               padding-right: 0;
             }
@@ -272,7 +272,7 @@ import PlusIcon from './icons/PlusIcon.vue'
             align-items: center;
             width: 190px;
             h3 {
-              margin-left: 14px;
+              margin-left: toRem(14);
               text-align: left;
             }
           }
@@ -296,16 +296,16 @@ import PlusIcon from './icons/PlusIcon.vue'
             align-items: center;
             width: 170px;
             h3 {
-              margin-top: 8px;
+              margin-top: toRem(8);
               text-align: end;
               padding-right: 0;
-              margin-right: 28px;
+              margin-right: toRem(28);
             }
           }
         }
 
         .accordion-btn {
-          padding: 27px 0;
+          padding: toRem(27) 0;
           width: 100%;
           display: flex;
           justify-content: space-between;
@@ -400,26 +400,26 @@ import PlusIcon from './icons/PlusIcon.vue'
             @media (min-width: toEm(1024)) {
               line-height: 1;
               font-size: toRem(40);
-              padding-top: 137px;
+              padding-top: toRem(137);
             }
           }
           p {
             padding: toRem(24) 0;
             @media (min-width: toEm(1024)) {
-              padding: 35px 0;
+              padding: toRem(35) 0;
             }
           }
         }
       }
     }
     .decorative-icon.wavy-line3 {
-      margin-top: 20px;
+      margin-top: toRem(20);
       width: 92%;
       height: auto;
       @media (min-width: toEm(600)) {
         width: 70%;
         display: block;
-        margin: 20px auto 0;
+        margin: toRem(20) auto 0;
       }
       @media (min-width: toEm(768)) {
         width: 60%;

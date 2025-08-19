@@ -1,5 +1,5 @@
 <script setup>
-import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 import IconWavyLine2 from './icons/IconWavyLine2.vue'
 import IconThreeLines from './icons/IconThreeLines.vue'
 import IconCircle from './icons/IconCircle.vue'
@@ -8,8 +8,8 @@ import PlusIcon from './icons/PlusIcon.vue'
 
 <template>
   <section class="app-promo">
-    <AppInnerHomePage class="container">
-      <div class="promo-wrap">
+    <AppContainer class="wrap container--big">
+      <div class="promo">
         <div class="text-content">
           <h2>
             Unlock the Power of
@@ -47,28 +47,28 @@ import PlusIcon from './icons/PlusIcon.vue'
 
       <PlusIcon class="visible-on-mobile" bottom="3%" right="10%" />
       <PlusIcon class="visible-on-mobile" bottom="44%" left="13%" />
-    </AppInnerHomePage>
+    </AppContainer>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-promo {
-  .container {
+  .wrap {
     border: 1px solid transparent;
     position: relative;
     @media (min-width: toEm(1024)) {
-      margin-top: -61px;
+      margin-top: toRem(-61);
     }
     @media (min-width: toEm(1280)) {
       margin-top: toRem(-92);
     }
 
-    .promo-wrap {
+    .promo {
       @media (min-width: toEm(1024)) {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
-        gap: 30px;
+        gap: toRem(30);
 
         margin-bottom: toRem(35);
       }
@@ -86,7 +86,7 @@ import PlusIcon from './icons/PlusIcon.vue'
           @media (min-width: toEm(768)) {
             line-height: 1.4;
             margin-top: toRem(39);
-            margin-bottom: 25px;
+            margin-bottom: toRem(25);
           }
         }
 
@@ -95,7 +95,7 @@ import PlusIcon from './icons/PlusIcon.vue'
           @media (min-width: toEm(768)) {
             font-size: toRem(20);
             line-height: 1.75;
-            margin-bottom: 60px;
+            margin-bottom: toRem(60);
           }
         }
       }

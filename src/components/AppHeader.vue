@@ -3,26 +3,15 @@ import IconLogo from './icons/IconLogo.vue'
 import IconSearch from './icons/IconSearch.vue'
 import AppMenu from './AppMenu.vue'
 import IconBurger from './icons/IconBurger.vue'
-import AppInnerHomePage from './AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 import IconHeaderWave from './icons/IconHeaderWave.vue'
 import IconCircle from './icons/IconCircle.vue'
 import PlusIcon from './icons/PlusIcon.vue'
 </script>
 
-<!-- 
-
-
-        <PlusIcon class="visible-on-mobile" top="0%" left="0%" />
-        <PlusIcon class="visible-on-mobile" top="0%" right="0%" /> 
-        <PlusIcon class="visible-on-mobile" bottom="0%" left="0%" /> 
-        <PlusIcon class="visible-on-mobile" bottom="0%" right="0%" /> 
-        
-        
-        -->
-
 <template>
   <header class="app-header">
-    <AppInnerHomePage>
+    <AppContainer class="container--big">
       <div class="body">
         <IconHeaderWave class="icon-header-wave" />
         <a href="/" class="link">
@@ -41,7 +30,7 @@ import PlusIcon from './icons/PlusIcon.vue'
         <PlusIcon class="visible-on-desktop" top="37%" right="-14%" />
         <PlusIcon class="visible-on-mobile" bottom="11%" left="53%" />
       </div>
-    </AppInnerHomePage>
+    </AppContainer>
   </header>
 </template>
 
@@ -100,6 +89,7 @@ import PlusIcon from './icons/PlusIcon.vue'
     }
     .header-menu {
       position: fixed;
+      z-index: 2;
       top: 0;
       background-color: var(--main-bg);
       width: 100vw;

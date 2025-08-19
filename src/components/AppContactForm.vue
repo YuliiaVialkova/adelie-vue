@@ -1,5 +1,5 @@
 <script setup>
-import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 import PlusIcon from './icons/PlusIcon.vue'
 
 import { reactive } from 'vue'
@@ -49,7 +49,7 @@ function validateForm() {
 
 <template>
   <section class="app-contact-form">
-    <AppInnerHomePage>
+    <AppContainer class="container--big">
       <div class="content">
         <h2>Contact form</h2>
         <form @submit.prevent="validateForm" novalidate>
@@ -100,7 +100,7 @@ function validateForm() {
         <PlusIcon class="visible-on-mobile" top="4%" right="7%" />
         <PlusIcon class="visible-on-mobile" bottom="5%" right="52%" />
       </div>
-    </AppInnerHomePage>
+    </AppContainer>
   </section>
 </template>
 
@@ -109,17 +109,17 @@ function validateForm() {
   border: 1px solid transparent;
   .content {
     position: relative;
-    margin-bottom: 183px;
+    margin-bottom: toRem(183);
     @media (min-width: toEm(1024)) {
-      margin: 80px 0 0 0;
+      margin: toRem(80) 0 0 0;
     }
     @media (min-width: toEm(1280)) {
-      margin: 100px 0 0 0;
+      margin: toRem(100) 0 0 0;
     }
     h2 {
       font-size: clamp(toRem(35), 5vw, toRem(50));
       line-height: 1.77;
-      margin: 0 0 0 24px;
+      margin: 0 0 0 toRem(24);
       position: relative;
       &::before {
         content: '';
@@ -170,15 +170,15 @@ function validateForm() {
 
         display: flex;
         align-items: flex-end;
-        padding: 28px 0 27px 0;
+        padding: toRem(28) 0 toRem(27) 0;
 
         position: relative;
         @media (min-width: toEm(1024)) {
-          padding: 53px 0 27px 0;
+          padding: toRem(53) 0 toRem(27) 0;
         }
         input,
         textarea {
-          padding-left: 15px;
+          padding-left: toRem(15);
           outline: none;
           border-bottom: 1px solid transparent;
           transition: border 0.3s;
@@ -220,7 +220,7 @@ function validateForm() {
           flex-basis: 100%;
         }
         @media (min-width: toEm(1280)) {
-          padding: 0 0 27px 0;
+          padding: 0 0 toRem(27) 0;
         }
       }
       button {
@@ -235,7 +235,7 @@ function validateForm() {
         align-items: center;
         justify-content: center;
         position: relative;
-        margin-top: 43px;
+        margin-top: toRem(43);
         &::after {
           content: '';
           position: absolute;
@@ -250,10 +250,10 @@ function validateForm() {
           flex-grow: 0;
         }
         @media (min-width: toEm(1024)) {
-          margin-top: 40px;
+          margin-top: toRem(40);
         }
         @media (min-width: toEm(1280)) {
-          margin-top: 47px;
+          margin-top: toRem(47);
         }
       }
     }

@@ -1,5 +1,5 @@
 <script setup>
-import AppInnerWrap from './AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 import IconLogo from './icons/IconLogo.vue'
 import IconFooterBg from './icons/IconFooterBg.vue'
 import IconFooterWave from './icons/IconFooterWave.vue'
@@ -9,7 +9,7 @@ import AppMenu from './AppMenu.vue'
 
 <template>
   <footer class="app-footer">
-    <AppInnerWrap class="footer-wrap">
+    <AppContainer class="footer-container container--big">
       <IconFooterBg class="icon-footer-bg" />
       <IconFooterWave class="icon-footer-wave" />
       <IconFooterArc class="icon-footer-arc" />
@@ -20,13 +20,13 @@ import AppMenu from './AppMenu.vue'
         <p>© 2023 All rights reserved</p>
         <AppMenu class="footer-menu" />
       </div>
-    </AppInnerWrap>
+    </AppContainer>
   </footer>
 </template>
 
 <style lang="scss" scoped>
 .app-footer {
-  .footer-wrap {
+  .footer-container {
     position: relative;
 
     .icon-footer-bg {
@@ -83,13 +83,13 @@ import AppMenu from './AppMenu.vue'
       color: var(--additional-color-text);
 
       @media (min-width: toEm(1024)) {
-        padding-top: 262px;
+        padding-top: toRem(262);
         flex-direction: row;
         justify-content: flex-start;
-        padding-bottom: 75px;
+        padding-bottom: toRem(75);
       }
       .logo-link {
-        margin-bottom: 31px;
+        margin-bottom: toRem(31);
         font-size: 0;
         line-height: 1;
         @media (min-width: toEm(1024)) {

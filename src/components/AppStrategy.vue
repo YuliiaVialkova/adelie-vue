@@ -1,12 +1,12 @@
 <script setup>
-import AppInnerHomePage from '../components/AppInnerHomePage.vue'
+import AppContainer from './AppContainer.vue'
 import IconCircle from './icons/IconCircle.vue'
 import PlusIcon from './icons/PlusIcon.vue'
 </script>
 
 <template>
   <section class="app-strategy">
-    <AppInnerHomePage class="container">
+    <AppContainer class="wrap container--big">
       <div class="text-content">
         <h2><span class="highlight">Who will</span> do it for you?</h2>
         <p>
@@ -33,14 +33,14 @@ import PlusIcon from './icons/PlusIcon.vue'
 
       <PlusIcon class="visible-on-mobile" bottom="44%" right="29%" />
       <PlusIcon class="visible-on-mobile" bottom="2%" left="9%" />
-    </AppInnerHomePage>
+    </AppContainer>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .app-strategy {
   border: 1px solid transparent;
-  .container {
+  .wrap {
     position: relative;
     @media (min-width: toEm(1024)) {
       display: flex;
