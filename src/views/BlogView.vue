@@ -10,6 +10,10 @@ import article02_1x from '@/assets/images/content/blog/article02-1x.jpg'
 import article02_2x from '@/assets/images/content/blog/article02-2x.jpg'
 import article03_1x from '@/assets/images/content/blog/article03-1x.jpg'
 import article03_2x from '@/assets/images/content/blog/article03-2x.jpg'
+import article04_1x from '@/assets/images/content/blog/article04-1x.jpg'
+import article04_2x from '@/assets/images/content/blog/article04-2x.jpg'
+import article05_1x from '@/assets/images/content/blog/article05-1x.jpg'
+import article05_2x from '@/assets/images/content/blog/article05-2x.jpg'
 
 const articles = [
   {
@@ -48,6 +52,30 @@ const articles = [
     title: 'Creating Great Gutenberg WordPress Blocks',
     excerpt: `To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block`,
   },
+  {
+    images: {
+      jpg1x: article04_1x,
+      jpg2x: article04_2x,
+      alt: 'A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup.',
+    },
+    formattedDate: '07.03.2020',
+    dateISO: '2020-03-07',
+    link: '/',
+    title: 'Is it procrastination?',
+    excerpt: `The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage,`,
+  },
+  {
+    images: {
+      jpg1x: article05_1x,
+      jpg2x: article05_2x,
+      alt: 'A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup.',
+    },
+    formattedDate: '07.03.2020',
+    dateISO: '2020-03-07',
+    link: '/',
+    title: 'Creation of an online store OpenCart 3x independently',
+    excerpt: `To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block`,
+  },
 ]
 </script>
 
@@ -83,9 +111,18 @@ const articles = [
           :size="30"
         />
       </template>
-
-      <PlusIcon v-if="index % 5 === 3" class="visible-on-mobile" top="0%" left="0%" />
-      <PlusIcon v-if="index % 5 === 4" class="visible-on-mobile" bottom="0%" right="0%" />
+      <template v-if="index % 5 === 2">
+        <!--every 5 starting from the third one -->
+        <PlusIcon class="visible-on-mobile" bottom="5%" right="14%" />
+      </template>
+      <template v-if="index % 5 === 3">
+        <!--every 5 starting from the fourth one -->
+        <PlusIcon class="visible-on-mobile" top="38%" left="4%" />
+      </template>
+      <template v-if="index % 5 === 4">
+        <!--every 5 starting from the fifth one -->
+        <PlusIcon class="visible-on-mobile" bottom="13%" right="12%" />
+      </template>
     </AppArticle>
   </div>
 </template>
@@ -95,7 +132,7 @@ const articles = [
   margin-bottom: 45px;
 }
 .articles {
-  margin-bottom: 143px;
+  margin-bottom: 339px;
   .article {
     margin-bottom: 47px;
     position: relative;

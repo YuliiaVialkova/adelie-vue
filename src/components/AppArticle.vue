@@ -126,7 +126,7 @@ defineProps({
     }
     .app-article__button.highlight::after {
       bottom: 9%;
-      height: 35%;
+      height: 41%;
     }
   }
 }
