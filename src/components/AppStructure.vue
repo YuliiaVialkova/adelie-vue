@@ -112,7 +112,7 @@ import PlusIcon from './icons/PlusIcon.vue'
       </div>
       <IconWavyLine3 class="decorative-icon wavy-line3" />
 
-      <IconCircle class="decorative-icon circle" :stroke-width="5" :size="30" />
+      <IconCircle class="decorative-icon decorative-icon--circle" :stroke-width="5" :size="30" />
       <IconThreeLines class="decorative-icon three-lines" />
       <PlusIcon class="visible-on-desktop" top="36%" left="-20%" />
       <PlusIcon class="visible-on-desktop" bottom="19%" left="-3%" />
@@ -435,11 +435,10 @@ import PlusIcon from './icons/PlusIcon.vue'
         left: -276px;
       }
     }
-    .decorative-icon.circle {
+    .decorative-icon--circle {
       display: none;
       @media (min-width: toEm(1024)) {
         display: block;
-        position: absolute;
         bottom: 11%;
         right: 24%;
       }

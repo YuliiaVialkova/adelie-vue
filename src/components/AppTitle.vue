@@ -41,7 +41,7 @@ import AppContainer from './AppContainer.vue'
       font-size: clamp(toRem(40), 7vw, toRem(70));
       font-weight: 400;
       line-height: 1.15;
-      margin: toRem(13) 0 toRem(24);
+      margin: 0px 0 36px;
 
       @media (min-width: toEm(1024)) {
         margin-bottom: toRem(28);

@@ -16,7 +16,6 @@ import PlusIcon from './icons/PlusIcon.vue'
             <span class="highlight">Optimal</span> <span class="highlight">Solutions</span>
             for Your Business with Us!
           </h2>
-
           <p>
             We specialize in delivering top-notch e-commerce development solutions tailored to meet
             your unique business needs. With our extensive experience and deep understanding of the
@@ -24,10 +23,9 @@ import PlusIcon from './icons/PlusIcon.vue'
             success.
           </p>
         </div>
-
         <div class="img-wrap">
           <img
-            src="../assests/images/content/promo.svg"
+            src="../assets/images/content/promo.svg"
             alt="A man and woman sit in a chair, engaged in a conversation, both smiling and appearing relaxed."
           />
           <IconThreeLines class="decorative-icon three-lines" />

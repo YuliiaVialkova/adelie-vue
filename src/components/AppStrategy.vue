@@ -18,7 +18,7 @@ import PlusIcon from './icons/PlusIcon.vue'
       </div>
       <div class="img-wrap">
         <img
-          src="../assests/images/content/strategy.svg"
+          src="../assets/images/content/strategy.svg"
           alt="Black and white artwork showing a man and woman looking at a computer screen, illustrating a collaborative moment."
         />
         <IconCircle class="decorative-icon circle" :stroke-width="5" :size="26" />

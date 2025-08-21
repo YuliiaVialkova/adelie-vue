@@ -1,4 +1,4 @@
-import './assests/main.scss'
+import './assets/main.scss'
 import './stores/script.js'
 
 import { createApp } from 'vue'

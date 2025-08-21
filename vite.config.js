@@ -18,11 +18,11 @@ export default defineConfig({
       scss: {
         // автоматично підключити ці SCSS-файли до кожного <style lang="scss">
         additionalData: `
-          @use "@/assests/reset.scss" as *;
-          @use "@/assests/vars.scss" as *;
-          @use "@/assests/mixins.scss" as *;
-          @use "@/assests/fonts.scss" as *;
-          @use '@/assests/components.scss' as *;
+          @use "@/assets/reset.scss" as *;
+          @use "@/assets/vars.scss" as *;
+          @use "@/assets/mixins.scss" as *;
+          @use "@/assets/fonts.scss" as *;
+          @use '@/assets/components.scss' as *;
         `,
       },
     },

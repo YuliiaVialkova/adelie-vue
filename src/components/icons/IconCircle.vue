@@ -16,6 +16,7 @@ defineProps({
 </script>
 <template>
   <svg
+    class="circle-icon"
     xmlns="http://www.w3.org/2000/svg"
     :width="size"
     :height="size"
@@ -31,3 +32,20 @@ defineProps({
     />
   </svg>
 </template>
+
+<style scoped>
+.circle-icon {
+  display: block;
+  position: absolute;
+}
+.visible-on-desktop {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.visible-on-mobile {
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
+</style>

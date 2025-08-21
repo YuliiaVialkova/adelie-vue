@@ -27,7 +27,7 @@ const positionStyles = computed(() => {
   position: absolute;
   width: 8px;
   height: 8px;
-  background: url('@/assests/images/design/plus.svg') no-repeat center;
+  background: url('@/assets/images/design/plus.svg') no-repeat center;
   background-size: contain;
 }
 .visible-on-desktop {

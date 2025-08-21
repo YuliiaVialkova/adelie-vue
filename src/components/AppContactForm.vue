@@ -239,7 +239,7 @@ function validateForm() {
         &::after {
           content: '';
           position: absolute;
-          background-image: url(../assests/images/design/arrow.svg);
+          background-image: url(../assets/images/design/arrow.svg);
           top: 50%;
           translate: 0 -50%;
           right: -20px;

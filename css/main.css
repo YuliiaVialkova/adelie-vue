@@ -81,34 +81,55 @@ label {
 
 :root {
   --light: #fff;
-  --dark: #000;
+  --dark: hwb(0 0% 100%);
   --design-color: #4cf049;
   --main-color-text: var(--dark);
   --additional-color-text: var(--light);
   --highlight-color-text: var(--design-color);
   --text-underline-color: var(--design-color);
+  --highlight-color-btn: rgb(76, 240, 73, 0.1);
   --main-bg-icon: var(--dark);
   --main-color-icon: var(--dark);
   --additional-color-icon: var(--light);
+  --design-color-icon: var(--design-color);
   --main-hover-icon: var(--design-color);
   --main-bg: var(--light);
+  --design-bg: rgb(76, 240, 73, 0.1);
   --main-link-hover: var(--design-color);
+  --accordion-main-border: rgba(0, 0, 0, 0.11);
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url(../assests/fonts/Gilroy-Light.woff2) format("woff2");
+  src: url(../assets/fonts/Gilroy-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url(../assests/fonts/Gilroy-Regular.woff2) format("woff2");
+  src: url(../assets/fonts/Gilroy-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+.highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 16%;
+  width: 100%;
+  height: 27%;
+  background-color: var(--highlight-color-text);
+  z-index: -1;
+}
+
 #vue-inspector-container {
   display: none !important;
 }
@@ -129,6 +150,8 @@ body {
   color: var(--main-color-icon);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  font-size: 0;
+  line-height: 1;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .icon:hover {
