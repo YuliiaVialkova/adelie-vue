@@ -13,7 +13,7 @@ import AppContainer from './AppContainer.vue'
 
 <template>
   <section class="app-title">
-    <AppContainer class="wrap container--big">
+    <AppContainer class="app-title__container container--big">
       <h1><slot name="heading"></slot></h1>
       <IconRainLeft class="decorative-icon-rain left" />
       <IconRainRight class="decorative-icon-rain right" />
@@ -31,25 +31,25 @@ import AppContainer from './AppContainer.vue'
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .app-title {
-  .wrap {
+  &__container {
     text-align: center;
     position: relative;
 
     h1 {
-      font-size: clamp(toRem(40), 7vw, toRem(70));
+      font-size: clamp(40px, 7vw, 70px);
       font-weight: 400;
       line-height: 1.15;
-      margin: 0px 0 36px;
+      margin-bottom: toRem(36);
 
-      @media (min-width: toEm(1024)) {
+      @media (min-width: 1024px) {
         margin-bottom: toRem(28);
       }
     }
     .decorative-icon-rain.left {
       display: none;
-      @media (min-width: toEm(1280)) {
+      @media (min-width: 1280px) {
         display: block;
         position: absolute;
         top: -24px;
@@ -58,7 +58,7 @@ import AppContainer from './AppContainer.vue'
     }
     .decorative-icon-rain.right {
       display: none;
-      @media (min-width: toEm(1280)) {
+      @media (min-width: 1280px) {
         display: block;
         position: absolute;
         top: -9px;
@@ -69,7 +69,7 @@ import AppContainer from './AppContainer.vue'
       li {
         display: inline-block;
         .link {
-          font-size: toRem(20);
+          font-size: 20px;
           line-height: 1.15;
           &:last-child {
             color: #b4b4b4;
@@ -77,7 +77,7 @@ import AppContainer from './AppContainer.vue'
         }
         .slash {
           color: #b4b4b4;
-          margin: 0 10px;
+          margin: 0 toRem(10);
         }
       }
     }

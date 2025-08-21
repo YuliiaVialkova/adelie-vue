@@ -1,6 +1,7 @@
 <script setup>
 import AppTitle from '@/components/AppTitle.vue'
 import AppArticle from '@/components/AppArticle.vue'
+import AppPagination from '@/components/AppPagination.vue'
 import PlusIcon from '@/components/icons/PlusIcon.vue'
 import IconCircle from '@/components/icons/IconCircle.vue'
 
@@ -124,22 +125,26 @@ const articles = [
         <PlusIcon class="visible-on-mobile" bottom="13%" right="12%" />
       </template>
     </AppArticle>
+    <AppPagination class="pagination"></AppPagination>
   </div>
 </template>
 
 <style lang="scss">
 .caption {
-  margin-bottom: 45px;
+  margin-bottom: toRem(45);
 }
 .articles {
-  margin-bottom: 339px;
+  margin-bottom: 347px;
   .article {
-    margin-bottom: 47px;
+    margin-bottom: toRem(47);
     position: relative;
     .decorative-icon--circle {
       top: 52%;
       left: 15%;
     }
+  }
+  .pagination {
+    margin: 69px 0;
   }
 }
 </style>
