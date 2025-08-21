@@ -78,9 +78,9 @@ defineProps({
       margin: 0 auto;
       min-height: 230px;
       min-width: 355px;
-      max-width: 580px;
       aspect-ratio: 355/230;
       img {
+        display: block;
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -88,8 +88,8 @@ defineProps({
       .app-article__meta {
         background-color: var(--main-bg);
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: -1px;
+        left: -1px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
