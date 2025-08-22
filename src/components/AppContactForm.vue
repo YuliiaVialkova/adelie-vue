@@ -98,7 +98,6 @@ function validateForm() {
         <PlusIcon class="visible-on-desktop" bottom="-9%" left="35%" />
 
         <PlusIcon class="visible-on-mobile" top="4%" right="7%" />
-        <PlusIcon class="visible-on-mobile" bottom="5%" right="52%" />
       </div>
     </AppContainer>
   </section>

@@ -5,6 +5,7 @@ import IconFooterBg from './icons/IconFooterBg.vue'
 import IconFooterWave from './icons/IconFooterWave.vue'
 import IconFooterArc from './icons/IconFooterArc.vue'
 import AppMenu from './AppMenu.vue'
+import PlusIcon from './icons/PlusIcon.vue'
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import AppMenu from './AppMenu.vue'
         <p>© 2023 All rights reserved</p>
         <AppMenu class="footer-menu" />
       </div>
+      <PlusIcon class="visible-on-mobile" top="-110%" left="46%" />
     </AppContainer>
   </footer>
 </template>
