@@ -4,23 +4,15 @@ import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
-  <div class="body">
-    <app-header></app-header>
-    <main>
-      <router-view />
-    </main>
-    <app-footer></app-footer>
-  </div>
+  <app-header></app-header>
+  <main class="page">
+    <router-view />
+  </main>
+  <app-footer></app-footer>
 </template>
 
-<style scoped lang="scss">
-.body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden;
-  main {
-    flex-grow: 1;
-  }
+<style lang="scss">
+.page {
+  flex-grow: 1;
 }
 </style>

@@ -123,6 +123,7 @@ const articles = [
       <template v-if="index % 5 === 4">
         <!--every 5 starting from the fifth one -->
         <PlusIcon class="visible-on-mobile" bottom="13%" right="12%" />
+        <PlusIcon class="visible-on-mobile" bottom="38%" left="2%" />
       </template>
     </AppArticle>
     <AppPagination class="pagination"></AppPagination>
@@ -134,7 +135,7 @@ const articles = [
   margin-bottom: toRem(45);
 }
 .articles {
-  margin-bottom: 338px;
+  margin-bottom: toRem(338);
   .article {
     margin-bottom: toRem(47);
     position: relative;
@@ -144,7 +145,7 @@ const articles = [
     }
   }
   .pagination {
-    margin: 79px 0;
+    margin: toRem(79) 0;
   }
 }
 </style>

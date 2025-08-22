@@ -1,13 +1,29 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Adelie</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="body">
+    <div id="app" class="app"></div>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
+
+<style lang="scss">
+  .body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--main-color-text);
+    .app {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+  }
+</style>

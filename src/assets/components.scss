@@ -13,3 +13,15 @@
   background-color: var(--highlight-color-text);
   z-index: -1;
 }
+
+.icon {
+  color: var(--main-color-icon);
+  transition: color 0.3s;
+  font-size: 0;
+  line-height: 1;
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &:hover {
+      color: var(--main-hover-icon);
+    }
+  }
+}

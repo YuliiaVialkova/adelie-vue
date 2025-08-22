@@ -10,22 +10,3 @@
 #__vue-devtools-container__ {
   display: none !important;
 }
-body {
-  font-family: 'Gilroy', sans-serif;
-  font-size: toRem(18);
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--main-color-text);
-}
-
-.icon {
-  color: var(--main-color-icon);
-  transition: color 0.3s;
-  font-size: 0;
-  line-height: 1;
-  @media (any-hover: hover) and (any-pointer: fine) {
-    &:hover {
-      color: var(--main-hover-icon);
-    }
-  }
-}

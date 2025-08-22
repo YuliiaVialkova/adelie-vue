@@ -97,7 +97,7 @@ defineProps({
         gap: 10px 50px;
         font-size: 17px;
         line-height: 1.29;
-        padding: 21px 20px 16px 20px;
+        padding: toRem(21) toRem(20) toRem(16);
         time,
         span {
           display: flex;

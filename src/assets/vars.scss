@@ -2,8 +2,10 @@
   --light: #fff;
   --dark: hwb(0 0% 100%);
   --design-color: #4cf049;
+
   --main-color-text: var(--dark);
   --additional-color-text: var(--light);
+
   --highlight-color-text: var(--design-color);
   --text-underline-color: var(--design-color);
 
@@ -17,6 +19,7 @@
 
   --main-bg: var(--light);
   --design-bg: rgb(76, 240, 73, 0.1);
+
   --main-link-hover: var(--design-color);
 
   --accordion-main-border: rgba(0, 0, 0, 0.11);

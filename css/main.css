@@ -130,22 +130,6 @@ label {
   z-index: -1;
 }
 
-#vue-inspector-container {
-  display: none !important;
-}
-
-#__vue-devtools-container__ {
-  display: none !important;
-}
-
-body {
-  font-family: "Gilroy", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--main-color-text);
-}
-
 .icon {
   color: var(--main-color-icon);
   -webkit-transition: color 0.3s;
@@ -157,4 +141,12 @@ body {
   .icon:hover {
     color: var(--main-hover-icon);
   }
+}
+
+#vue-inspector-container {
+  display: none !important;
+}
+
+#__vue-devtools-container__ {
+  display: none !important;
 }
