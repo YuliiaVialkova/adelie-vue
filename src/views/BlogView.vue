@@ -134,7 +134,7 @@ const articles = [
   margin-bottom: toRem(45);
 }
 .articles {
-  margin-bottom: 347px;
+  margin-bottom: 338px;
   .article {
     margin-bottom: toRem(47);
     position: relative;
@@ -144,7 +144,7 @@ const articles = [
     }
   }
   .pagination {
-    margin: 69px 0;
+    margin: 79px 0;
   }
 }
 </style>
