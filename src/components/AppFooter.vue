@@ -1,11 +1,11 @@
 <script setup>
 import AppContainer from './AppContainer.vue'
 import IconLogo from './icons/IconLogo.vue'
-import IconFooterBg from './icons/IconFooterBg.vue'
+import IconFooterBg from './icons/DecorFooterBg.vue'
 import IconFooterWave from './icons/IconFooterWave.vue'
 import IconFooterArc from './icons/IconFooterArc.vue'
 import AppMenu from './AppMenu.vue'
-import PlusIcon from './icons/PlusIcon.vue'
+import PlusIcon from './decors/DecorPlus.vue'
 </script>
 
 <template>

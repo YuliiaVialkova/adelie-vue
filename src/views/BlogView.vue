@@ -2,8 +2,8 @@
 import AppTitle from '@/components/AppTitle.vue'
 import AppArticle from '@/components/AppArticle.vue'
 import AppPagination from '@/components/AppPagination.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import IconCircle from '@/components/icons/IconCircle.vue'
+import PlusIcon from '@/components/decors/DecorPlus.vue'
+import IconCircle from '@/components/decors/DecorCircle.vue'
 
 import article01_1x from '@/assets/images/content/blog/article01-1x.jpg'
 import article01_2x from '@/assets/images/content/blog/article01-2x.jpg'

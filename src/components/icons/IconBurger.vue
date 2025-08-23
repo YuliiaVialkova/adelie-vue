@@ -4,11 +4,11 @@
   </button>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .icon-burger {
-  width: toRem(40);
-  height: toRem(22);
-  @media (min-width: toEm(768)) {
+  width: 40px;
+  height: 22px;
+  @media (min-width: 768px) {
     display: none;
   }
   &::before,
@@ -16,7 +16,7 @@
   span {
     content: '';
     width: 100%;
-    height: toRem(4);
+    height: 4px;
     position: absolute;
     right: 0;
     background-color: var(--main-bg-icon);

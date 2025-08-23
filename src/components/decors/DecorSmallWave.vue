@@ -1,7 +1,24 @@
+<script setup>
+import { usePositionStyles } from '@/stores/usePositionStyles'
+import { useSizeStyles } from '@/stores/useSizeStyles'
+
+const props = defineProps({
+  top: { type: String, default: null },
+  left: { type: String, default: null },
+  right: { type: String, default: null },
+  bottom: { type: String, default: null },
+  width: { type: [Number, String], default: 'auto' },
+  height: { type: [Number, String], default: 'auto' },
+})
+
+const positionStyles = usePositionStyles(props)
+const sizeStyles = useSizeStyles(props)
+</script>
+
 <template>
   <svg
-    width="420"
-    height="322"
+    class="decor-small-wave"
+    :style="{ ...positionStyles, ...sizeStyles }"
     viewBox="0 0 420 322"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -2,7 +2,7 @@
 import IconWavyLine1 from './icons/IconWavyLine1.vue'
 import IconRainLeft from './icons/IconRainLeft.vue'
 import IconRainRight from './icons/IconRainRight.vue'
-import PlusIcon from './icons/PlusIcon.vue'
+import PlusIcon from './decors/DecorPlus.vue'
 import AppContainer from './AppContainer.vue'
 </script>
 

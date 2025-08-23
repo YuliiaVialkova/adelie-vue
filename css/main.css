@@ -130,6 +130,26 @@ label {
   z-index: -1;
 }
 
+#vue-inspector-container {
+  display: none !important;
+}
+
+#__vue-devtools-container__ {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .visible-on-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .visible-on-mobile {
+    display: none;
+  }
+}
+
 .icon {
   color: var(--main-color-icon);
   -webkit-transition: color 0.3s;
@@ -143,10 +163,6 @@ label {
   }
 }
 
-#vue-inspector-container {
-  display: none !important;
-}
-
-#__vue-devtools-container__ {
-  display: none !important;
+.decor {
+  position: absolute;
 }

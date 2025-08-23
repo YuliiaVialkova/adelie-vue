@@ -10,3 +10,30 @@
 #__vue-devtools-container__ {
   display: none !important;
 }
+
+.visible-on-desktop {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.visible-on-mobile {
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
+
+.icon {
+  color: var(--main-color-icon);
+  transition: color 0.3s;
+  font-size: 0;
+  line-height: 1;
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &:hover {
+      color: var(--main-hover-icon);
+    }
+  }
+}
+
+.decor {
+  position: absolute;
+}

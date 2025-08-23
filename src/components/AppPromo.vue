@@ -2,8 +2,8 @@
 import AppContainer from './AppContainer.vue'
 import IconWavyLine2 from './icons/IconWavyLine2.vue'
 import IconThreeLines from './icons/IconThreeLines.vue'
-import IconCircle from './icons/IconCircle.vue'
-import PlusIcon from './icons/PlusIcon.vue'
+import IconCircle from './decors/DecorCircle.vue'
+import PlusIcon from './decors/DecorPlus.vue'
 </script>
 
 <template>

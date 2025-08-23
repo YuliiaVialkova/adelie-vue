@@ -1,6 +1,6 @@
 <script setup>
 import AppContainer from './AppContainer.vue'
-import PlusIcon from './icons/PlusIcon.vue'
+import PlusIcon from './decors/DecorPlus.vue'
 
 import { reactive } from 'vue'
 
