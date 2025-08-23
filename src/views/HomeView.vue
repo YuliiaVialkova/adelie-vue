@@ -17,5 +17,3 @@ import AppContactForm from '../components/AppContactForm.vue'
 
   <AppContactForm />
 </template>
-
-<style lang="scss" scoped></style>

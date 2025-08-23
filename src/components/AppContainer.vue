@@ -1,22 +1,21 @@
 <template>
-  <div class="container">
+  <div class="app-container">
     <slot></slot>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.container {
+<style lang="scss">
+.app-container {
   margin: 0 auto;
   padding: 0 toRem(10);
-}
-
-.container--middle {
-  max-width: toRem(1296);
-}
-.container--small {
-  max-width: toRem(810);
-}
-.container--big {
-  max-width: toRem(1332);
+  &--small {
+    max-width: 810px;
+  }
+  &--middle {
+    max-width: 1296px;
+  }
+  &--big {
+    max-width: 1332px;
+  }
 }
 </style>
