@@ -1,26 +1,26 @@
 <template>
-  <nav class="menu">
-    <ul class="list">
-      <li class="item">
-        <RouterLink to="/" class="link">Home</RouterLink>
+  <nav class="app-menu">
+    <ul class="app-menu__list">
+      <li class="app-menu__item">
+        <RouterLink to="/" class="app-menu__link">Home</RouterLink>
       </li>
       <li>
-        <RouterLink to="/blog" class="link">Blog</RouterLink>
+        <RouterLink to="/blog" class="app-menu__link">Blog</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact" class="link">Contact</RouterLink>
+        <RouterLink to="/contact" class="app-menu__link">Contact</RouterLink>
       </li>
     </ul>
   </nav>
 </template>
 
-<style lang="scss" scoped>
-.menu {
-  &.header-menu > .list {
+<style lang="scss">
+.app-menu {
+  &.app-header__menu > .app-menu__list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    @media (min-width: toEm(768)) {
+    @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
@@ -28,27 +28,27 @@
       gap: clamp(toRem(30), 5vw, toRem(60));
     }
   }
-  &.footer-menu > .list {
+  &.app-footer__menu > .app-menu__list {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: toRem(50);
-    .item {
+    .app-menu__item {
       font-size: 0;
       line-height: 1;
     }
   }
-  .link {
+  &__link {
     font-weight: 400;
   }
-  &.header-menu .link {
-    font-size: toRem(28);
+  &.app-header__menu .app-menu__link {
+    font-size: 28px;
     padding: toRem(10);
     color: var(--highlight-color-text);
     transition: color 0.3s;
-    @media (min-width: toEm(768)) {
-      font-size: toRem(20);
+    @media (min-width: 768px) {
+      font-size: 20px;
       line-height: 1.15;
       color: var(--main-color-text);
     }
@@ -58,8 +58,8 @@
       }
     }
   }
-  &.footer-menu .link {
-    font-size: toRem(20);
+  &.app-footer__menu .app-menu__link {
+    font-size: 20px;
     line-height: 1.15;
     padding: 0 toRem(14);
   }

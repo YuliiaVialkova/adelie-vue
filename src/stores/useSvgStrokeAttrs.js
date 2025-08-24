@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 
-export function useStrokeAttrs(props) {
+export function useSvgStrokeAttrs(props) {
   return computed(() => {
     const attrs = {}
 

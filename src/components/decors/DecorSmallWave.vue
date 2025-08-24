@@ -19,6 +19,8 @@ const sizeStyles = useSizeStyles(props)
   <svg
     class="decor-small-wave"
     :style="{ ...positionStyles, ...sizeStyles }"
+    width="420"
+    height="322"
     viewBox="0 0 420 322"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
