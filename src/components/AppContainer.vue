@@ -8,6 +8,7 @@
 .app-container {
   margin: 0 auto;
   padding: 0 toRem(10);
+  position: relative;
   &--small {
     max-width: 810px;
   }

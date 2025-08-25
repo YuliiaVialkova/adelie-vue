@@ -51,6 +51,7 @@ import PlusIcon from './decors/DecorPlus.vue'
 
 <style lang="scss" scoped>
 .app-promo {
+  margin-top: 550px;
   .wrap {
     border: 1px solid transparent;
     position: relative;

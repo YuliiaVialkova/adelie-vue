@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="decor-rain-right"
     xmlns="http://www.w3.org/2000/svg"
     width="179"
     height="166"

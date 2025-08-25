@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="decor-wavy-line1"
     xmlns="http://www.w3.org/2000/svg"
     width="670"
     height="212"

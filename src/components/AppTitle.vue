@@ -6,8 +6,8 @@ defineProps({
   },
 })
 
-import IconRainLeft from './icons/IconRainLeft.vue'
-import IconRainRight from './icons/IconRainRight.vue'
+import IconRainLeft from './decors/DecorRainLeft.vue'
+import IconRainRight from './decors/DecorRainRight.vue'
 import AppContainer from './AppContainer.vue'
 </script>
 

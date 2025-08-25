@@ -1,101 +1,97 @@
 <script setup>
-import IconWavyLine1 from './icons/IconWavyLine1.vue'
-import IconRainLeft from './icons/IconRainLeft.vue'
-import IconRainRight from './icons/IconRainRight.vue'
-import PlusIcon from './decors/DecorPlus.vue'
+import DecorWavyLine1 from './icons/DecorWavyLine1.vue'
+import DecorRainLeft from './decors/DecorRainLeft.vue'
+import DecorRainRight from './decors/DecorRainRight.vue'
+import DecorPlus from './decors/DecorPlus.vue'
 import AppContainer from './AppContainer.vue'
 </script>
 
 <template>
   <section class="app-home-page-title">
-    <AppContainer class="wrap container--big">
-      <h1><span>Adelie</span> E-commerce Solutions</h1>
-      <IconRainLeft class="decorative-icon-rain left" />
-      <IconRainRight class="decorative-icon-rain right" />
-      <p class="subtitle">Empower Your Online Business with Expert E-commerce Solutions</p>
-      <div class="icon-wrap">
-        <IconWavyLine1 class="decorative-icon" />
-      </div>
-      <PlusIcon class="visible-on-desktop" bottom="44%" left="-19%" />
-      <PlusIcon class="visible-on-desktop" bottom="34%" left="7%" />
-      <PlusIcon class="visible-on-desktop" bottom="38%" right="3%" />
-      <PlusIcon class="visible-on-desktop" bottom="21%" right="48%" />
-      <PlusIcon class="visible-on-mobile" bottom="9%" left="25%" />
-      <PlusIcon class="visible-on-mobile" bottom="33%" right="3%" />
+    <AppContainer class="app-home-page-title__container app-container--big">
+      <h1 class="app-home-page-title__title"><span>Adelie</span> E-commerce Solutions</h1>
+
+      <DecorRainLeft
+        class="app-home-page-title__decor app-home-page-title__decor--rain-left decor"
+      />
+      <DecorRainRight
+        class="app-home-page-title__decor app-home-page-title__decor--rain-right decor"
+      />
+
+      <p class="app-home-page-title__subtitle">
+        Empower Your Online Business with Expert E-commerce Solutions
+      </p>
+
+      <DecorWavyLine1 class="app-home-page-title__decor app-home-page-title__decor--wavy-line1" />
+
+      <DecorPlus class="app-home-page-title__decor visible-on-desktop" bottom="44%" left="-19%" />
+      <DecorPlus class="app-home-page-title__decor visible-on-desktop" bottom="34%" left="7%" />
+      <DecorPlus class="app-home-page-title__decor visible-on-desktop" bottom="38%" right="3%" />
+      <DecorPlus class="app-home-page-title__decor visible-on-desktop" bottom="21%" right="48%" />
+      <DecorPlus class="app-home-page-title__decor visible-on-mobile" bottom="12%" left="25%" />
+      <DecorPlus class="app-home-page-title__decor visible-on-mobile" bottom="35%" right="3%" />
     </AppContainer>
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .app-home-page-title {
-  .wrap {
+  &__container {
     text-align: center;
-    position: relative;
-    @media (min-width: toEm(1024)) {
+
+    @media (min-width: 1024px) {
       padding-right: toRem(35);
     }
-
-    h1 {
-      font-size: clamp(toRem(38), 7vw, toRem(70));
-      font-weight: 400;
-      line-height: 1.15;
-      margin-top: 1px;
-      margin-bottom: toRem(24);
-      @media (min-width: toEm(1024)) {
-        margin-bottom: toRem(16);
-      }
-
-      span {
-        color: var(--highlight-color-text);
-      }
+  }
+  h1 {
+    font-size: clamp(toRem(38), 7vw, toRem(70));
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: toRem(24);
+    @media (min-width: 1024px) {
+      margin-bottom: toRem(16);
     }
-    .decorative-icon-rain.left {
-      display: none;
-      @media (min-width: toEm(1280)) {
-        display: block;
-        position: absolute;
-        top: -10px;
-        left: -38px;
-      }
-    }
-    .decorative-icon-rain.right {
-      display: none;
-      @media (min-width: toEm(1280)) {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 6px;
-      }
-    }
-    .subtitle {
-      margin-bottom: toRem(17);
-      padding: 0 toRem(5);
-      font-size: toRem(20);
-      @media (min-width: toEm(768)) {
-        font-size: toRem(25);
-        line-height: 1.4;
-        padding: 0;
-        margin-bottom: toRem(25);
-      }
-    }
-    .icon-wrap {
-      line-height: 1;
-      font-size: 0;
-      width: 76%;
-      margin: 0 auto;
 
-      @media (min-width: toEm(768)) {
-        width: 62%;
-      }
-      @media (min-width: toEm(1024)) {
-        width: 52%;
-      }
+    span {
+      color: var(--highlight-color-text);
+    }
+  }
+  &__decor--rain-left {
+    display: none;
+    @media (min-width: 1280px) {
+      display: block;
+      top: -10px;
+      left: -38px;
+    }
+  }
+  &__decor--rain-right {
+    display: none;
+    @media (min-width: 1280px) {
+      display: block;
+      top: 0;
+      right: 6px;
+    }
+  }
+  p {
+    margin-bottom: toRem(17);
+    padding: 0 toRem(5);
+    font-size: 20px;
+    @media (min-width: 768px) {
+      font-size: 25px;
+      line-height: 1.4;
+      padding: 0;
+      margin-bottom: toRem(25);
+    }
+  }
+  &__decor--wavy-line1 {
+    width: 76%;
+    height: 50%;
 
-      .decorative-icon {
-        object-fit: contain;
-        height: auto;
-        max-width: 100%;
-      }
+    @media (min-width: 768px) {
+      width: 62%;
+    }
+    @media (min-width: 1024px) {
+      width: 52%;
     }
   }
 }
