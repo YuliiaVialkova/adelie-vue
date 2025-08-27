@@ -2,9 +2,9 @@ window.addEventListener('load', windowLoad)
 
 function windowLoad() {
   if (window.innerWidth > 1024) {
-    const accordionFirstItem = document.querySelector('.accordion-item.step-1')
+    const accordionFirstItem = document.querySelector('.app-accordion__item.step-1')
     if (accordionFirstItem) {
-      const accordionFirstButton = accordionFirstItem.querySelector('.accordion-btn')
+      const accordionFirstButton = accordionFirstItem.querySelector('.app-accordion__btn')
       if (accordionFirstButton) {
         accordionFirstButton.classList.add('active')
       }
@@ -24,13 +24,13 @@ function documentAction(e) {
     document.documentElement.classList.toggle('open-menu')
   }
   //click on accordion button
-  const btnAccordion = targetElement.closest('.accordion-btn')
+  const btnAccordion = targetElement.closest('.app-accordion__btn')
   if (!btnAccordion) return
 
-  const accordionItem = btnAccordion.closest('.accordion-item')
+  const accordionItem = btnAccordion.closest('.app-accordion__item')
   if (!accordionItem) return
 
-  const accordionContent = accordionItem.querySelector('.accordion-content')
+  const accordionContent = accordionItem.querySelector('.app-accordion__content')
 
   const isDesktop = window.innerWidth > 1024
 
@@ -41,16 +41,16 @@ function documentAction(e) {
     if (btnAccordion.classList.contains('active')) return
 
     // Remove active from all buttons
-    document.querySelectorAll('.accordion-btn').forEach((btn) => {
+    document.querySelectorAll('.app-accordion__btn').forEach((btn) => {
       btn.classList.remove('active')
     })
 
-    document.querySelectorAll('.accordion-content').forEach((content) => {
+    document.querySelectorAll('.app-accordion__content').forEach((content) => {
       content.classList.remove('active')
     })
 
     //Remove previous clones
-    document.querySelectorAll('.accordion-clone').forEach((clone) => clone.remove())
+    document.querySelectorAll('.app-accordion__clone').forEach((clone) => clone.remove())
 
     //Add active to the newly clicked button
     btnAccordion.classList.add('active')
@@ -64,13 +64,13 @@ function documentAction(e) {
     const isAlreadyActive = btnAccordion.classList.contains('active')
 
     // Знімаємо active з усіх
-    document.querySelectorAll('.accordion-btn').forEach((btn) => {
+    document.querySelectorAll('.app-accordion__btn').forEach((btn) => {
       btn.classList.remove('active')
     })
-    document.querySelectorAll('.accordion-content').forEach((content) => {
+    document.querySelectorAll('.app-accordion__content').forEach((content) => {
       content.classList.remove('active')
     })
-    document.querySelectorAll('.accordion-clone').forEach((clone) => clone.remove())
+    document.querySelectorAll('.app-accordion__clone').forEach((clone) => clone.remove())
 
     if (!isAlreadyActive) {
       btnAccordion.classList.add('active')
@@ -80,26 +80,26 @@ function documentAction(e) {
 }
 
 function showCloneForActiveButton() {
-  const activeButton = document.querySelector('.accordion-btn.active')
+  const activeButton = document.querySelector('.app-accordion__btn.active')
   if (activeButton) {
-    document.querySelectorAll('.accordion-clone').forEach((clone) => {
+    document.querySelectorAll('.app-accordion__clone').forEach((clone) => {
       clone.remove()
     })
     cloneAndInsertH3(activeButton)
 
-    const accordionItem = activeButton.closest('.accordion-item')
-    const accordionContent = accordionItem.querySelector('.accordion-content')
+    const accordionItem = activeButton.closest('.app-accordion__item')
+    const accordionContent = accordionItem.querySelector('.app-accordion__content')
     accordionContent.classList.add('active')
   }
 }
 
 function cloneAndInsertH3(button) {
   const h3 = button.querySelector('h3')
-  const accordion = button.closest('.accordion')
-  const circle = accordion.querySelector('.circle')
+  const accordion = button.closest('.app-accordion')
+  const circle = accordion.querySelector('.app-accordion__circle')
   if (h3) {
     const h3Clone = h3.cloneNode(true)
-    h3Clone.classList.add('accordion-clone')
+    h3Clone.classList.add('app-accordion__clone')
     circle.insertAdjacentElement('afterbegin', h3Clone)
   }
 }

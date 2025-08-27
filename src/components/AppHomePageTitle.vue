@@ -1,5 +1,5 @@
 <script setup>
-import DecorWavyLine1 from './icons/DecorWavyLine1.vue'
+import DecorWavyLine1 from './decors/DecorWavyLine1.vue'
 import DecorRainLeft from './decors/DecorRainLeft.vue'
 import DecorRainRight from './decors/DecorRainRight.vue'
 import DecorPlus from './decors/DecorPlus.vue'
@@ -9,20 +9,19 @@ import AppContainer from './AppContainer.vue'
 <template>
   <section class="app-home-page-title">
     <AppContainer class="app-home-page-title__container app-container--big">
-      <h1 class="app-home-page-title__title"><span>Adelie</span> E-commerce Solutions</h1>
-
-      <DecorRainLeft
-        class="app-home-page-title__decor app-home-page-title__decor--rain-left decor"
-      />
-      <DecorRainRight
-        class="app-home-page-title__decor app-home-page-title__decor--rain-right decor"
-      />
-
-      <p class="app-home-page-title__subtitle">
-        Empower Your Online Business with Expert E-commerce Solutions
-      </p>
-
-      <DecorWavyLine1 class="app-home-page-title__decor app-home-page-title__decor--wavy-line1" />
+      <div class="app-home-page-title__content">
+        <h1 class="app-home-page-title__title"><span>Adelie</span> E-commerce Solutions</h1>
+        <DecorRainLeft
+          class="app-home-page-title__decor app-home-page-title__decor--rain-left decor"
+        />
+        <DecorRainRight
+          class="app-home-page-title__decor app-home-page-title__decor--rain-right decor"
+        />
+        <p class="app-home-page-title__subtitle">
+          Empower Your Online Business with Expert E-commerce Solutions
+        </p>
+        <DecorWavyLine1 class="app-home-page-title__decor app-home-page-title__decor--wavy-line1" />
+      </div>
 
       <DecorPlus class="app-home-page-title__decor visible-on-desktop" bottom="44%" left="-19%" />
       <DecorPlus class="app-home-page-title__decor visible-on-desktop" bottom="34%" left="7%" />
@@ -38,9 +37,10 @@ import AppContainer from './AppContainer.vue'
 .app-home-page-title {
   &__container {
     text-align: center;
-
+  }
+  &__content {
     @media (min-width: 1024px) {
-      padding-right: toRem(35);
+      padding-right: 30px;
     }
   }
   h1 {
@@ -49,7 +49,7 @@ import AppContainer from './AppContainer.vue'
     line-height: 1.15;
     margin-bottom: toRem(24);
     @media (min-width: 1024px) {
-      margin-bottom: toRem(16);
+      margin-bottom: 18px;
     }
 
     span {
