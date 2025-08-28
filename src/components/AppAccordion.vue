@@ -113,6 +113,17 @@
     height: 466px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 50%;
+    margin-left: 9%;
+    margin-right: 10%;
+  }
+  @media (min-width: 1280px) {
+    margin-left: 9%;
+  }
+  @media (min-width: 1366px) {
+    margin-left: 9%;
+  }
+  @media (min-width: 1536px) {
+    margin-left: 9%;
   }
 
   &__circle {
@@ -149,7 +160,7 @@
       border-bottom: 1px solid var(--accordion-main-border);
     }
     @media (min-width: 1024px) {
-      position: absolute;
+      position: relative;
       border: 1px solid transparent;
       top: 50%;
       left: 50%;
@@ -157,8 +168,8 @@
       border-top: none;
 
       &.step-1 > .app-accordion__btn {
-        bottom: 127px;
-        right: 167px;
+        top: -551px;
+        left: -353px;
         margin-right: 2px;
         h3 {
           text-align: end;
@@ -167,8 +178,8 @@
         }
       }
       &.step-2 > .app-accordion__btn {
-        top: -84px;
-        left: 172px;
+        top: -642px;
+        left: -178px;
         h3 {
           text-align: end;
           margin-bottom: toRem(7);
@@ -176,8 +187,65 @@
         }
       }
       &.step-3 > .app-accordion__btn {
-        top: -6px;
-        left: 463px;
+        top: -564px;
+        right: 189px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        width: 159px;
+        h3 {
+          margin-left: toRem(14);
+          text-align: start;
+          padding-right: 0;
+        }
+      }
+
+      &.step-4 > .app-accordion__btn {
+        top: -190px;
+        left: 120px;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 185px;
+        h3 {
+          margin-top: toRem(6);
+          margin: 6px;
+          text-align: left;
+        }
+      }
+      &.step-5 > .app-accordion__btn {
+        top: -111px;
+        left: -91px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        width: 173px;
+        h3 {
+          margin-top: 6px;
+          margin-right: 0;
+          text-align: center;
+        }
+      }
+      &.step-6 > .app-accordion__btn {
+        top: -207px;
+        left: -344px;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: end;
+        width: 161px;
+        h3 {
+          margin-top: toRem(8);
+          text-align: end;
+          padding-right: 0;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    @media (min-width: 1280px) {
+      &.step-3 > .app-accordion__btn {
+        top: -526px;
+        right: 85px;
         flex-direction: row-reverse;
         justify-content: flex-end;
         align-items: center;
@@ -188,80 +256,34 @@
           padding-right: 0;
         }
       }
-
       &.step-4 > .app-accordion__btn {
-        top: 437px;
-        left: 301px;
-        flex-direction: column-reverse;
-        width: 136px;
+        top: -290px;
+        left: 197px;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 192px;
         h3 {
           margin-top: toRem(6);
-          text-align: right;
-        }
-      }
-      &.step-5 > .app-accordion__btn {
-        top: 371px;
-        left: 56px;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        width: 170px;
-        h3 {
-          margin-top: 8px;
-          text-align: end;
-          padding-right: 0;
-          margin-right: toRem(28);
-        }
-      }
-      &.step-6 > .app-accordion__btn {
-        top: 192px;
-        left: 45px;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 131px;
-        h3 {
-          margin-left: toRem(8);
-          text-align: start;
-          padding-right: 0;
-        }
-      }
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-    @media (min-width: 1280px) {
-      &.step-3 > .app-accordion__btn {
-        top: 34px;
-        left: 504px;
-      }
-      &.step-4 > .app-accordion__btn {
-        top: 262px;
-        left: 544px;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        width: 190px;
-        h3 {
-          margin-left: toRem(14);
+          margin: 6px;
           text-align: left;
         }
       }
       &.step-5 > .app-accordion__btn {
-        top: 434px;
-        left: 263px;
+        top: -121px;
+        left: -86px;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: end;
         width: 173px;
         h3 {
+          margin-top: 6px;
           margin-right: 0;
           text-align: right;
         }
       }
       &.step-6 > .app-accordion__btn {
-        top: 371px;
-        left: 56px;
+        top: -187px;
+        left: -291px;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
@@ -348,9 +370,9 @@
       &.active {
         position: absolute;
         z-index: 2;
-        top: -182px;
-        left: 351px;
-        width: 36vw;
+        top: -544px;
+        left: 33vw;
+        width: 33vw;
         height: auto;
         max-height: none;
         font-size: 20px;
@@ -360,17 +382,31 @@
       }
     }
     @media (min-width: 1280px) {
-      //   &.active {
-      //     top: -97px;
-      //     left: 465px;
-      //     width: 462px;
-      //   }
+      &.active {
+        top: -544px;
+        left: 36vw;
+        width: 33vw;
+      }
+    }
+    @media (min-width: 1366px) {
+      &.active {
+        top: -420px;
+        left: 30vw;
+        width: 33vw;
+      }
     }
     @media (min-width: 1536px) {
       &.active {
-        top: -97px;
-        left: 465px;
-        width: 462px;
+        top: -420px;
+        left: 28vw;
+        width: 452px;
+      }
+    }
+    @media (min-width: 1800px) {
+      &.active {
+        top: -420px;
+        left: 24vw;
+        width: 452px;
       }
     }
     h4 {
