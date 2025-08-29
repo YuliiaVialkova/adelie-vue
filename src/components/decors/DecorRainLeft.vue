@@ -1,6 +1,18 @@
+<script setup>
+import { usePositionStyles } from '@/stores/usePositionStyles'
+
+const props = defineProps({
+  top: { type: String, default: null },
+  left: { type: String, default: null },
+  right: { type: String, default: null },
+  bottom: { type: String, default: null },
+})
+const positionStyles = usePositionStyles(props)
+</script>
 <template>
   <svg
     class="decor-rain-left"
+    :style="positionStyles"
     xmlns="http://www.w3.org/2000/svg"
     width="192"
     height="184"

@@ -2,8 +2,8 @@
 import AppTitle from '@/components/AppTitle.vue'
 import AppArticle from '@/components/AppArticle.vue'
 import AppPagination from '@/components/AppPagination.vue'
-import PlusIcon from '@/components/decors/DecorPlus.vue'
-import IconCircle from '@/components/decors/DecorCircle.vue'
+import DecorPlus from '@/components/decors/DecorPlus.vue'
+import DecorCircle from '@/components/decors/DecorCircle.vue'
 
 import article01_1x from '@/assets/images/content/blog/article01-1x.jpg'
 import article01_2x from '@/assets/images/content/blog/article01-2x.jpg'
@@ -81,68 +81,71 @@ const articles = [
 </script>
 
 <template>
-  <AppTitle
-    class="caption"
-    :breadcrumbs="[
-      { label: 'Home', href: '/' },
-      { label: 'Blog', href: '/blog' },
-    ]"
-  >
-    <template #heading>Blog</template>
-  </AppTitle>
-  <div class="articles">
-    <AppArticle
-      class="article"
-      v-for="(article, index) in articles"
-      :key="index"
-      :images="article.images"
-      :formattedDate="article.formattedDate"
-      :dateISO="article.dateISO"
-      :link="article.link"
-      :title="article.title"
-      :excerpt="article.excerpt"
+  <div class="blog-view">
+    <AppTitle
+      class="blog-view__caption"
+      :breadcrumbs="[
+        { label: 'Home', href: '/' },
+        { label: 'Blog', href: '/blog' },
+      ]"
     >
-      <template v-if="index % 5 === 1">
-        <!--every 5 starting from the second one -->
-        <PlusIcon class="visible-on-mobile" top="-3%" left="13%" />
-        <PlusIcon class="visible-on-mobile" top="57%" right="11%" />
-        <IconCircle
-          class="decorative-icon decorative-icon--circle visible-on-mobile"
-          :stroke-width="5"
-          :size="30"
-        />
-      </template>
-      <template v-if="index % 5 === 2">
-        <!--every 5 starting from the third one -->
-        <PlusIcon class="visible-on-mobile" bottom="5%" right="14%" />
-      </template>
-      <template v-if="index % 5 === 3">
-        <!--every 5 starting from the fourth one -->
-        <PlusIcon class="visible-on-mobile" top="38%" left="4%" />
-      </template>
-      <template v-if="index % 5 === 4">
-        <!--every 5 starting from the fifth one -->
-        <PlusIcon class="visible-on-mobile" bottom="13%" right="12%" />
-        <PlusIcon class="visible-on-mobile" bottom="38%" left="2%" />
-      </template>
-    </AppArticle>
-    <AppPagination class="pagination"></AppPagination>
+      <template #heading>Blog</template>
+    </AppTitle>
+    <div class="blog-view__articles">
+      <AppArticle
+        class="blog-view__article"
+        v-for="(article, index) in articles"
+        :key="index"
+        :images="article.images"
+        :formattedDate="article.formattedDate"
+        :dateISO="article.dateISO"
+        :link="article.link"
+        :title="article.title"
+        :excerpt="article.excerpt"
+      >
+        <template v-if="index % 5 === 1">
+          <!--every 5 starting from the second one -->
+          <DecorPlus class="visible-on-mobile" top="-3%" left="13%" />
+          <DecorPlus class="visible-on-mobile" top="57%" right="11%" />
+          <DecorCircle
+            class="blog-view__decor blog-view__decor--circle visible-on-mobile"
+            :stroke-width="5"
+            width="30"
+            height="30"
+            top="52%"
+            left="15%"
+          />
+        </template>
+        <template v-if="index % 5 === 2">
+          <!--every 5 starting from the third one -->
+          <DecorPlus class="visible-on-mobile" bottom="5%" right="14%" />
+        </template>
+        <template v-if="index % 5 === 3">
+          <!--every 5 starting from the fourth one -->
+          <DecorPlus class="visible-on-mobile" top="38%" left="4%" />
+        </template>
+        <template v-if="index % 5 === 4">
+          <!--every 5 starting from the fifth one -->
+          <DecorPlus class="visible-on-mobile" bottom="13%" right="12%" />
+          <DecorPlus class="visible-on-mobile" bottom="38%" left="2%" />
+        </template>
+      </AppArticle>
+      <AppPagination class="pagination"></AppPagination>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-.caption {
-  margin-bottom: toRem(45);
-}
-.articles {
-  margin-bottom: toRem(338);
-  .article {
+.blog-view {
+  &__caption {
+    margin-bottom: toRem(61);
+  }
+  &__articles {
+    margin-bottom: toRem(338);
+  }
+  &__article {
     margin-bottom: toRem(47);
     position: relative;
-    .decorative-icon--circle {
-      top: 52%;
-      left: 15%;
-    }
   }
   .pagination {
     margin: toRem(79) 0;
