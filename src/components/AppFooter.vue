@@ -1,134 +1,127 @@
 <script setup>
 import AppContainer from './AppContainer.vue'
 import IconLogo from './icons/IconLogo.vue'
-import IconFooterBg from './icons/DecorFooterBg.vue'
-import IconFooterWave from './icons/IconFooterWave.vue'
-import IconFooterArc from './icons/IconFooterArc.vue'
+import DecorFooterBg from './decors/DecorFooterBg.vue'
+import DecorFooterWave from './decors/DecorFooterWave.vue'
+import DecorFooterArc from './decors/DecorFooterArc.vue'
 import AppMenu from './AppMenu.vue'
-import PlusIcon from './decors/DecorPlus.vue'
+import DecorPlus from './decors/DecorPlus.vue'
 </script>
 
 <template>
   <footer class="app-footer">
-    <AppContainer class="footer-container container--big">
-      <IconFooterBg class="icon-footer-bg" />
-      <IconFooterWave class="icon-footer-wave" />
-      <IconFooterArc class="icon-footer-arc" />
-      <div class="body">
-        <a class="logo-link" href="/">
-          <IconLogo class="logo" />
+    <AppContainer class="app-footer__container app-container--big">
+      <DecorFooterBg class="app-footer__decor app-footer__decor--footer-bg" />
+      <DecorFooterWave class="app-footer__decor app-footer__decor--footer-wave" />
+      <DecorFooterArc class="app-footer__decor app-footer__decor--footer-arc" />
+      <div class="app-footer__content">
+        <a class="app-footer__logo-link" href="/">
+          <IconLogo class="app-footer__logo" />
         </a>
-        <p>© 2023 All rights reserved</p>
-        <AppMenu class="footer-menu" />
+        <p class="app-footer__copyright">© 2023 All rights reserved</p>
+        <AppMenu class="app-footer__menu" />
       </div>
-      <PlusIcon class="visible-on-mobile" top="-110%" left="46%" />
+      <DecorPlus class="app-footer__decor visible-on-mobile" top="-110%" left="46%" />
     </AppContainer>
   </footer>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .app-footer {
-  .footer-container {
-    position: relative;
-
-    .icon-footer-bg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin-left: -308px;
-      z-index: -1;
-      overflow: visible;
-      @media (min-width: toEm(1920)) {
-        overflow: hidden;
-      }
+  &__decor--footer-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: -308px;
+    z-index: -1;
+    overflow: visible;
+    @media (min-width: 1920px) {
+      overflow: hidden;
     }
-    .icon-footer-wave {
-      position: absolute;
-      bottom: -64px;
-      right: -349px;
-      z-index: -3;
-      overflow: visible;
-      height: 817px;
-      width: 931px;
+  }
+  &__decor--footer-wave {
+    position: absolute;
+    bottom: -64px;
+    right: -349px;
+    z-index: -3;
+    overflow: visible;
+    height: 817px;
+    width: 931px;
 
-      @media (min-width: toEm(1024)) {
-        width: 1021px;
-        height: 919px;
-        right: -305px;
-      }
-      @media (min-width: toEm(1920)) {
-        overflow: hidden;
-      }
+    @media (min-width: 1024px) {
+      width: 1021px;
+      height: 919px;
+      right: -305px;
     }
-    .icon-footer-arc {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: -2;
-      overflow: visible;
-      width: 292px;
-      height: 590px;
-      @media (min-width: toEm(1024)) {
-        width: auto;
-        height: auto;
-        right: -279px;
-      }
-      @media (min-width: toEm(1920)) {
-        overflow: hidden;
-      }
+    @media (min-width: 1920px) {
+      overflow: hidden;
     }
-    .body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  }
+  &__decor--footer-arc {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    overflow: visible;
+    width: 292px;
+    height: 590px;
+    @media (min-width: toEm(1024)) {
+      width: auto;
+      height: auto;
+      right: -279px;
+    }
+    @media (min-width: toEm(1920)) {
+      overflow: hidden;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-      color: var(--additional-color-text);
+    color: var(--additional-color-text);
 
-      @media (min-width: toEm(1024)) {
-        padding-top: toRem(262);
-        flex-direction: row;
-        justify-content: flex-start;
-        padding-bottom: toRem(75);
-      }
-      .logo-link {
-        margin-bottom: toRem(31);
-        font-size: 0;
-        line-height: 1;
-        @media (min-width: toEm(1024)) {
-          margin-bottom: 0;
-        }
-        .logo {
-          width: toRem(139);
-          height: toRem(34);
+    @media (min-width: 1024px) {
+      padding-top: toRem(262);
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-bottom: toRem(75);
+    }
+  }
+  &__logo-link {
+    margin-bottom: toRem(31);
+    font-size: 0;
+    line-height: 1;
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
+  }
+  &__logo {
+    width: toRem(139);
+    height: toRem(34);
 
-          color: var(--additional-color-icon);
-          @media (min-width: toEm(1024)) {
-            width: 169px;
-            height: 41px;
+    color: var(--additional-color-icon);
+    @media (min-width: 1024px) {
+      width: 169px;
+      height: 41px;
+      margin-right: toRem(30);
+    }
+  }
 
-            margin-right: toRem(30);
-          }
-        }
-      }
-
-      p {
-        font-size: toRem(16);
-        font-weight: 400;
-        line-height: 1.18;
-        margin-bottom: toRem(24);
-        @media (min-width: toEm(1024)) {
-          margin-bottom: 0;
-        }
-      }
-      .footer-menu {
-        margin-bottom: toRem(36);
-        @media (min-width: toEm(1024)) {
-          margin-bottom: 0;
-        }
-        @media (min-width: toEm(1024)) {
-          margin-left: toRem(145);
-        }
-      }
+  &__copyright {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.18;
+    margin-bottom: toRem(24);
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
+  }
+  &__menu {
+    margin-bottom: toRem(36);
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+      margin-left: toRem(145);
     }
   }
 }

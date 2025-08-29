@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="decor-footer-wave"
     width="955"
     height="804"
     viewBox="0 0 955 804"

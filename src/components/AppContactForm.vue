@@ -49,7 +49,7 @@ function validateForm() {
 
 <template>
   <section class="app-contact-form">
-    <AppContainer class="app-contact-form__container container--big">
+    <AppContainer class="app-contact-form__container app-container--big">
       <div class="app-contact-form__content">
         <h2 class="app-contact-form__title">Contact form</h2>
         <form @submit.prevent="validateForm" novalidate class="app-contact-form__form">
@@ -204,61 +204,61 @@ function validateForm() {
         border-color: red;
       }
     }
-    .label-name {
+  }
+  &__label--name {
+    flex-grow: 1;
+  }
+  &__label--phone {
+    flex-grow: 1;
+  }
+  &__label--email {
+    @media (min-width: 768px) {
+      flex-basis: 100%;
+    }
+    @media (min-width: 1024px) {
+      flex-basis: auto;
       flex-grow: 1;
     }
-    .label-phone {
-      flex-grow: 1;
+  }
+  &__label--message {
+    @media (min-width: 768px) {
+      flex-basis: 100%;
     }
-    .label-email {
-      @media (min-width: 768px) {
-        flex-basis: 100%;
-      }
-      @media (min-width: 1024px) {
-        flex-basis: auto;
-        flex-grow: 1;
-      }
+    @media (min-width: 1280px) {
+      padding: 0 0 toRem(27) 0;
     }
-    .label-message {
-      @media (min-width: 768px) {
-        flex-basis: 100%;
-      }
-      @media (min-width: 1280px) {
-        padding: 0 0 toRem(27) 0;
-      }
+  }
+  button {
+    background-color: var(--design-color-icon);
+    border-radius: 50%;
+    width: toRem(110);
+    height: toRem(110);
+    font-size: 20px;
+    font-weight: 500;
+    padding: toRem(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: toRem(43);
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../assets/images/design/arrow.svg);
+      top: 50%;
+      translate: 0 -50%;
+      right: -20px;
+      width: 41px;
+      height: 16px;
     }
-    button {
-      background-color: var(--design-color-icon);
-      border-radius: 50%;
-      width: toRem(110);
-      height: toRem(110);
-      font-size: 20px;
-      font-weight: 500;
-      padding: toRem(30);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin-top: toRem(43);
-      &::after {
-        content: '';
-        position: absolute;
-        background-image: url(../assets/images/design/arrow.svg);
-        top: 50%;
-        translate: 0 -50%;
-        right: -20px;
-        width: 41px;
-        height: 16px;
-      }
-      @media (min-width: 768px) {
-        flex-grow: 0;
-      }
-      @media (min-width: 1024px) {
-        margin-top: toRem(40);
-      }
-      @media (min-width: 1280px) {
-        margin-top: toRem(47);
-      }
+    @media (min-width: 768px) {
+      flex-grow: 0;
+    }
+    @media (min-width: 1024px) {
+      margin-top: toRem(40);
+    }
+    @media (min-width: 1280px) {
+      margin-top: toRem(47);
     }
   }
 }
