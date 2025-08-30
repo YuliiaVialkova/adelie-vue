@@ -64,6 +64,7 @@ defineProps({
     </AppContainer>
   </article>
 </template>
+
 <style lang="scss">
 .app-article {
   &__image-wrapper {
@@ -84,17 +85,17 @@ defineProps({
   }
 
   &__title {
-    font-size: clamp(23px, 4vw, 30px);
+    font-size: clamp(toRem(23), 4vw, toRem(30));
     line-height: 1.739;
     margin: 10px 0 10px;
   }
   &__title + &__excerpt {
-    font-size: 16px;
+    font-size: toRem(16);
     line-height: 1.56;
-    margin-bottom: 12px;
+    margin-bottom: toRem(12);
   }
   &__button {
-    font-size: 20px;
+    font-size: toRem(20);
     font-weight: 500;
     line-height: 1.75;
     text-transform: uppercase;
