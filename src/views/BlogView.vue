@@ -108,17 +108,17 @@ const articles = [
           <DecorPlus class="visible-on-mobile" top="-3%" left="13%" />
           <DecorPlus class="visible-on-mobile" top="57%" right="11%" />
           <DecorCircle
-            class="blog-view__decor blog-view__decor--circle visible-on-mobile"
+            class="blog-view__decor blog-view__decor--circle decor visible-on-mobile"
             :stroke-width="5"
             width="30"
             height="30"
             top="52%"
-            left="15%"
+            left="13%"
           />
         </template>
         <template v-if="index % 5 === 2">
           <!--every 5 starting from the third one -->
-          <DecorPlus class="visible-on-mobile" bottom="5%" right="14%" />
+          <DecorPlus class="visible-on-desktop" bottom="5%" right="14%" />
         </template>
         <template v-if="index % 5 === 3">
           <!--every 5 starting from the fourth one -->
@@ -130,7 +130,7 @@ const articles = [
           <DecorPlus class="visible-on-mobile" bottom="38%" left="2%" />
         </template>
       </AppArticle>
-      <AppPagination class="pagination"></AppPagination>
+      <AppPagination class="blog-view__pagination"></AppPagination>
     </div>
   </div>
 </template>
@@ -138,7 +138,10 @@ const articles = [
 <style lang="scss">
 .blog-view {
   &__caption {
-    margin-bottom: toRem(61);
+    margin-bottom: toRem(41);
+    @media (min-width: 1024px) {
+      margin-bottom: toRem(61);
+    }
   }
   &__articles {
     margin-bottom: toRem(338);
@@ -147,7 +150,7 @@ const articles = [
     margin-bottom: toRem(47);
     position: relative;
   }
-  .pagination {
+  &__pagination {
     margin: toRem(79) 0;
   }
 }

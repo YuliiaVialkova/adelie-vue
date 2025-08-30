@@ -22,8 +22,8 @@ import IconAuthor from '@/components/icons/IconAuthor.vue'
 .app-figcaption {
   background-color: var(--main-bg);
   position: absolute;
-  bottom: -1px;
-  left: -1px;
+  bottom: -2px;
+  left: -2px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

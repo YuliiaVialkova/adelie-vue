@@ -72,6 +72,9 @@ defineProps({
     min-height: 230px;
     min-width: 355px;
     aspect-ratio: 355/230;
+    @media (min-width: 1024px) {
+      aspect-ratio: 793/420;
+    }
   }
   &__image {
     display: block;
@@ -79,26 +82,26 @@ defineProps({
     width: 100%;
     object-fit: cover;
   }
-}
 
-h2 {
-  font-size: 23px;
-  line-height: 1.739;
-  margin: 10px 0 10px;
-}
-h2 + p {
-  font-size: 16px;
-  line-height: 1.56;
-  margin-bottom: 12px;
-}
-.app-article__button {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.75;
-  text-transform: uppercase;
-}
-.app-article__button.highlight::after {
-  bottom: 9%;
-  height: 41%;
+  &__title {
+    font-size: clamp(23px, 4vw, 30px);
+    line-height: 1.739;
+    margin: 10px 0 10px;
+  }
+  &__title + &__excerpt {
+    font-size: 16px;
+    line-height: 1.56;
+    margin-bottom: 12px;
+  }
+  &__button {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.75;
+    text-transform: uppercase;
+  }
+  &__button.highlight::after {
+    bottom: 9%;
+    height: 41%;
+  }
 }
 </style>
