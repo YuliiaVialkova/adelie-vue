@@ -20,13 +20,14 @@ defineProps({
   </nav>
   <slot> </slot>
 </template>
+
 <style lang="scss">
 .app-breadcrumbs {
   &__item {
     display: inline-block;
   }
   &__link {
-    font-size: 20px;
+    font-size: toRem(20);
     line-height: 1.15;
     &:last-child {
       color: #b4b4b4;
