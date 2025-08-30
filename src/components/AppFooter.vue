@@ -109,7 +109,7 @@ import DecorPlus from './decors/DecorPlus.vue'
   }
 
   &__copyright {
-    font-size: 16px;
+    font-size: toRem(16);
     font-weight: 400;
     line-height: 1.18;
     margin-bottom: toRem(24);
