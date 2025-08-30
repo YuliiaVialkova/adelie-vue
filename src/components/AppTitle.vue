@@ -37,7 +37,7 @@ import AppBreadcrumbs from './AppBreadcrumbs.vue'
     position: relative;
   }
   h1 {
-    font-size: clamp(40px, 7vw, 70px);
+    font-size: clamp(toRem(40), 7vw, toRem(70));
     font-weight: 400;
     line-height: 1.15;
     margin-bottom: toRem(36);
@@ -48,7 +48,7 @@ import AppBreadcrumbs from './AppBreadcrumbs.vue'
     }
   }
   &__breadcrumbs {
-    margin-bottom: 10px;
+    margin-bottom: toRem(10);
   }
 }
 </style>

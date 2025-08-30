@@ -52,7 +52,7 @@ import DecorPlus from './decors/DecorPlus.vue'
   }
   &__content {
     @media (min-width: 1024px) {
-      padding: 139px 0 138px;
+      padding: toRem(139) 0 toRem(138);
     }
   }
   &__decor--wavy-line3 {

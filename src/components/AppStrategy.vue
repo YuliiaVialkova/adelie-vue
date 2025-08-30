@@ -79,7 +79,7 @@ import DecorPlus from './decors/DecorPlus.vue'
       text-align: start;
     }
     h2 {
-      font-size: clamp(35px, 6vw, 50px);
+      font-size: clamp(toRem(35), 6vw, toRem(50));
       line-height: 1.4285;
       margin-bottom: toRem(20);
 
@@ -90,7 +90,7 @@ import DecorPlus from './decors/DecorPlus.vue'
     p {
       margin-bottom: toRem(25);
       @media (min-width: 768px) {
-        font-size: 20px;
+        font-size: toRem(20);
         line-height: 1.75;
         margin-bottom: toRem(65);
       }
@@ -125,15 +125,5 @@ import DecorPlus from './decors/DecorPlus.vue'
       }
     }
   }
-  // &__decor--circle {
-  //   display: none;
-  //   @media (min-width: 1024px) {
-  //     display: block;
-  //     position: absolute;
-  //     bottom: -4%;
-  //     left: -13%;
-  //     visibility: visible;
-  //   }
-  // }
 }
 </style>
