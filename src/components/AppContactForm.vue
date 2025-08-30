@@ -120,7 +120,7 @@ function validateForm() {
       margin: toRem(100) 0 0 0;
     }
     h2 {
-      font-size: clamp(35px, 5vw, 50px);
+      font-size: clamp(toRem(35), 5vw, toRem(50));
       line-height: 1.77;
       margin: 0 0 0 toRem(24);
       position: relative;
@@ -167,7 +167,7 @@ function validateForm() {
     }
 
     label {
-      font-size: 20px;
+      font-size: toRem(20);
       line-height: 1.75;
       border-bottom: 2px solid var(--main-color-text);
       white-space: nowrap;
@@ -233,7 +233,7 @@ function validateForm() {
     border-radius: 50%;
     width: toRem(110);
     height: toRem(110);
-    font-size: 20px;
+    font-size: toRem(20);
     font-weight: 500;
     padding: toRem(30);
     display: flex;
