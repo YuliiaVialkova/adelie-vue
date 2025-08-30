@@ -70,7 +70,7 @@ import DecorPlus from './decors/DecorPlus.vue'
 <style lang="scss">
 .app-promo {
   @media (min-width: 1024px) {
-    margin-top: -103px;
+    margin-top: toRem(-103);
   }
 
   &__container {
@@ -96,20 +96,20 @@ import DecorPlus from './decors/DecorPlus.vue'
       text-align: start;
     }
     h2 {
-      font-size: clamp(35px, 4vw, 50px);
+      font-size: clamp(toRem(35), 4vw, toRem(50));
       line-height: 1.58;
-      margin: 7px 0 18px;
+      margin: toRem(7) 0 toRem(18);
 
       @media (min-width: 768px) {
         line-height: 1.4;
-        margin-top: 46px;
-        margin-bottom: 21px;
+        margin-top: toRem(46);
+        margin-bottom: toRem(21);
       }
     }
 
     p {
       @media (min-width: 768px) {
-        font-size: 20px;
+        font-size: toRem(20);
         line-height: 1.75;
         margin-bottom: toRem(60);
       }

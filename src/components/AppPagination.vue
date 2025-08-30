@@ -19,17 +19,17 @@ import { RouterLink } from 'vue-router'
 .app-pagination {
   text-align: center;
   padding: 0px 0px 0px;
-  font-size: 20px;
+  font-size: toRem(20);
   line-height: 1.75;
   .previous-page,
   .next-page {
     display: inline-block;
   }
   .previous-page {
-    margin: 0 48px 0 30px;
+    margin: 0 toRem(48) 0 toRem(30);
   }
   .next-page {
-    margin: 0 30px 0 48px;
+    margin: 0 toRem(30) 0 toRem(48);
   }
   ul {
     display: inline-flex;
