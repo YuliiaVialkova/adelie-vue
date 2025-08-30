@@ -49,7 +49,7 @@ import AppContainer from './AppContainer.vue'
     line-height: 1.15;
     margin-bottom: toRem(24);
     @media (min-width: 1024px) {
-      margin-bottom: 18px;
+      margin-bottom: toRem(18);
     }
 
     span {
@@ -75,9 +75,9 @@ import AppContainer from './AppContainer.vue'
   p {
     margin-bottom: toRem(17);
     padding: 0 toRem(5);
-    font-size: 20px;
+    font-size: toRem(20);
     @media (min-width: 768px) {
-      font-size: 25px;
+      font-size: toRem(25);
       line-height: 1.4;
       padding: 0;
       margin-bottom: toRem(25);

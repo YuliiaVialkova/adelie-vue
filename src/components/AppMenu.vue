@@ -43,12 +43,12 @@
     font-weight: 400;
   }
   &.app-header__menu .app-menu__link {
-    font-size: 28px;
+    font-size: toRem(28);
     padding: toRem(10);
     color: var(--highlight-color-text);
     transition: color 0.3s;
     @media (min-width: 768px) {
-      font-size: 20px;
+      font-size: toRem(20);
       line-height: 1.15;
       color: var(--main-color-text);
     }
@@ -59,7 +59,7 @@
     }
   }
   &.app-footer__menu .app-menu__link {
-    font-size: 20px;
+    font-size: toRem(20);
     line-height: 1.15;
     padding: 0 toRem(14);
   }
