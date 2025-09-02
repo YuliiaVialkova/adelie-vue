@@ -25,12 +25,19 @@ defineProps({
 .app-breadcrumbs {
   &__item {
     display: inline-block;
+    color: var(--main-color-text);
+    transition: color 0.3s;
   }
   &__link {
     font-size: toRem(20);
     line-height: 1.15;
     &:last-child {
       color: #b4b4b4;
+    }
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover:not(:last-child) {
+        color: var(--main-link-hover);
+      }
     }
   }
   &__separator {

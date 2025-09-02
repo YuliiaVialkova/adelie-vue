@@ -1,6 +1,8 @@
 <script setup>
 import DecorRainLeft from './decors/DecorRainLeft.vue'
 import DecorRainRight from './decors/DecorRainRight.vue'
+import DecorWavyLine4 from './decors/DecorWavyLine4.vue'
+
 import AppContainer from './AppContainer.vue'
 import AppBreadcrumbs from './AppBreadcrumbs.vue'
 </script>
@@ -18,6 +20,11 @@ import AppBreadcrumbs from './AppBreadcrumbs.vue'
         class="app-title__decor decor app-title__decor--rain-right visible-on-desktop"
         top="-5px"
         right="14px"
+      />
+      <DecorWavyLine4
+        class="app-title__decor decor app-title__decor--wavy-line4 visible-on-desktop"
+        top="-124%"
+        left="-22%"
       />
       <AppBreadcrumbs
         class="app-title__breadcrumbs"
@@ -49,6 +56,9 @@ import AppBreadcrumbs from './AppBreadcrumbs.vue'
   }
   &__breadcrumbs {
     margin-bottom: toRem(10);
+  }
+  &__decor {
+    pointer-events: none;
   }
 }
 </style>

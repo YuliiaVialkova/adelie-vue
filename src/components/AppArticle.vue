@@ -39,14 +39,16 @@ defineProps({
   <article class="app-article">
     <AppContainer class="app-article__container app-container--small">
       <figure class="app-article__image-wrapper">
-        <img
-          class="app-article__image"
-          :src="images.jpg1x"
-          :srcset="`
-             ${images.jpg1x} 1x,
-            ${images.jpg2x} 2x`"
-          :alt="images.alt"
-        />
+        <RouterLink :to="link">
+          <img
+            class="app-article__image"
+            :src="images.jpg1x"
+            :srcset="`
+               ${images.jpg1x} 1x,
+              ${images.jpg2x} 2x`"
+            :alt="images.alt"
+          />
+        </RouterLink>
         <AppFigcaption class="app-article__figcaption" :datetime="dateISO">
           <template #date>{{ formattedDate }}</template>
           <template #author>{{ author }}</template>
@@ -88,11 +90,30 @@ defineProps({
     font-size: clamp(toRem(23), 4vw, toRem(30));
     line-height: 1.739;
     margin: 10px 0 10px;
+    @media (min-width: 1024px) {
+      line-height: 1.33;
+      margin: 14px 0 3px;
+    }
   }
   &__title + &__excerpt {
     font-size: toRem(16);
     line-height: 1.56;
     margin-bottom: toRem(12);
+    @media (min-width: 1024px) {
+      font-size: toRem(20);
+      line-height: 1.75;
+      margin-bottom: 3px;
+    }
+  }
+  &__link {
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &__link:hover {
+      color: var(--main-link-hover);
+    }
   }
   &__button {
     font-size: toRem(20);

@@ -58,6 +58,25 @@
       }
     }
   }
+  &.app-header__menu .app-menu__link.router-link-active {
+    position: relative;
+  }
+  &.app-header__menu .app-menu__link.router-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-image: url(../assets/images/design/undeline-three-lines.svg);
+    background-repeat: no-repeat;
+    background-size: calc(100% - 20px) 100%;
+    background-position: center;
+  }
+  &.app-header__menu .app-menu__link[href='/adelie-vue/'].router-link-exact-active {
+    background-image: none;
+  }
+
   &.app-footer__menu .app-menu__link {
     font-size: toRem(20);
     line-height: 1.15;

@@ -73,11 +73,18 @@ import DecorPlus from './decors/DecorPlus.vue'
     margin-right: auto;
     font-size: 0;
     line-height: 1;
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover .app-header__logo {
+        color: var(--main-link-hover);
+      }
+    }
   }
 
   &__logo {
     width: 133px;
     height: 32px;
+    color: var(--main-color-text);
+    transition: color 0.3s;
     @media (min-width: 1024px) {
       width: 169px;
       height: 41px;
@@ -128,6 +135,9 @@ import DecorPlus from './decors/DecorPlus.vue'
   }
   &__burger {
     position: relative;
+  }
+  &__decor {
+    pointer-events: none;
   }
 }
 </style>
