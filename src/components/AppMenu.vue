@@ -8,6 +8,9 @@
         <RouterLink to="/blog" class="app-menu__link">Blog</RouterLink>
       </li>
       <li>
+        <RouterLink to="/blog" class="app-menu__link">Portfolio</RouterLink>
+      </li>
+      <li>
         <RouterLink to="/contact" class="app-menu__link">Contact</RouterLink>
       </li>
     </ul>
@@ -58,10 +61,10 @@
       }
     }
   }
-  &.app-header__menu .app-menu__link.router-link-active {
+  &.app-header__menu .app-menu__link.router-link-active:not([href='/adelie-vue/']) {
     position: relative;
   }
-  &.app-header__menu .app-menu__link.router-link-active::after {
+  &.app-header__menu .app-menu__link.router-link-active:not([href='/adelie-vue/'])::after {
     content: '';
     position: absolute;
     bottom: 0;

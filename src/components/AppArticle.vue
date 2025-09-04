@@ -120,6 +120,10 @@ defineProps({
     font-weight: 500;
     line-height: 1.75;
     text-transform: uppercase;
+    transition: transform 0.15s ease;
+  }
+  &__button:active {
+    transform: scale(0.95);
   }
   &__button.highlight::after {
     bottom: 9%;
