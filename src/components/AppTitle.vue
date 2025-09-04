@@ -5,6 +5,13 @@ import DecorWavyLine4 from './decors/DecorWavyLine4.vue'
 
 import AppContainer from './AppContainer.vue'
 import AppBreadcrumbs from './AppBreadcrumbs.vue'
+
+const props = defineProps({
+  breadcrumbs: {
+    type: Array,
+    default: () => [],
+  },
+})
 </script>
 
 <template>
@@ -26,13 +33,7 @@ import AppBreadcrumbs from './AppBreadcrumbs.vue'
         top="-124%"
         left="-22%"
       />
-      <AppBreadcrumbs
-        class="app-title__breadcrumbs"
-        :breadcrumbs="[
-          { label: 'Home', href: '/' },
-          { label: 'Blog', href: '/blog' },
-        ]"
-      />
+      <AppBreadcrumbs class="app-title__breadcrumbs" :breadcrumbs="props.breadcrumbs" />
     </AppContainer>
   </section>
 </template>

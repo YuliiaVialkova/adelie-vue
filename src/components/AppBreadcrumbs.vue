@@ -28,6 +28,11 @@ defineProps({
     color: var(--main-color-text);
     transition: color 0.3s;
   }
+  &__item:last-child .app-breadcrumbs__link,
+  &__item:last-child .app-breadcrumbs__text {
+    color: #b4b4b4;
+    pointer-events: none;
+  }
   &__link {
     font-size: toRem(20);
     line-height: 1.15;

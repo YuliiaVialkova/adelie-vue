@@ -87,10 +87,7 @@ const articles = [
   <div class="blog-view">
     <AppTitle
       class="blog-view__caption"
-      :breadcrumbs="[
-        { label: 'Home', href: '/' },
-        { label: 'Blog', href: '/blog' },
-      ]"
+      :breadcrumbs="[{ label: 'Home', href: '/' }, { label: 'Blog' }]"
     >
       <template #heading>Blog</template>
     </AppTitle>

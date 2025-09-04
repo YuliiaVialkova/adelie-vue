@@ -8,7 +8,7 @@
         <RouterLink to="/blog" class="app-menu__link">Blog</RouterLink>
       </li>
       <li>
-        <RouterLink to="/blog" class="app-menu__link">Portfolio</RouterLink>
+        <RouterLink to="/portfolio" class="app-menu__link">Portfolio</RouterLink>
       </li>
       <li>
         <RouterLink to="/contact" class="app-menu__link">Contact</RouterLink>
