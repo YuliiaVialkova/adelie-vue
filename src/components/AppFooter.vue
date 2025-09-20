@@ -84,7 +84,7 @@ import DecorPlus from './decors/DecorPlus.vue'
     @media (min-width: 1024px) {
       padding-top: toRem(262);
       flex-direction: row;
-      justify-content: flex-start;
+
       padding-bottom: toRem(75);
     }
   }
@@ -94,6 +94,7 @@ import DecorPlus from './decors/DecorPlus.vue'
     line-height: 1;
     @media (min-width: 1024px) {
       margin-bottom: 0;
+      margin-right: 30px;
     }
   }
   &__logo {
@@ -104,24 +105,29 @@ import DecorPlus from './decors/DecorPlus.vue'
     @media (min-width: 1024px) {
       width: 169px;
       height: 41px;
-      margin-right: toRem(30);
     }
   }
 
   &__copyright {
+    flex-shrink: 0;
     font-size: toRem(16);
     font-weight: 400;
     line-height: 1.18;
     margin-bottom: toRem(24);
     @media (min-width: 1024px) {
       margin-bottom: 0;
+      margin-right: toRem(30);
     }
   }
   &__menu {
-    margin-bottom: toRem(36);
+    margin-bottom: toRem(10);
+    @media (min-width: 600px) {
+      margin-bottom: toRem(36);
+    }
     @media (min-width: 1024px) {
       margin-bottom: 0;
-      margin-left: toRem(145);
+      margin-right: toRem(335);
+      margin-left: auto;
     }
   }
 }

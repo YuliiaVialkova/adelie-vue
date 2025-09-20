@@ -1,69 +1,81 @@
 <script setup>
-import AppContainer from '@/components/AppContainer.vue'
 import AppFigcaption from '@/components/AppFigcaption.vue'
 import { RouterLink } from 'vue-router'
+import { computed } from 'vue'
 
-defineProps({
-  images: {
+const props = defineProps({
+  article: {
     type: Object,
     required: true,
   },
-  dateISO: {
+  mode: {
     type: String,
-    required: true,
-  },
-  formattedDate: {
-    type: String,
-    required: true,
-  },
-  author: {
-    type: String,
-    default: 'admin',
-  },
-  link: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  excerpt: {
-    type: String,
-    required: false,
+    default: 'preview',
   },
 })
+
+const img1x = computed(
+  () =>
+    new URL(`../assets/images/content/blog/${props.article.images.jpg1x}`, import.meta.url).href,
+)
+const img2x = computed(
+  () =>
+    new URL(`../assets/images/content/blog/${props.article.images.jpg2x}`, import.meta.url).href,
+)
 </script>
 
 <template>
   <article class="app-article">
-    <AppContainer class="app-article__container app-container--small">
-      <figure class="app-article__image-wrapper">
-        <RouterLink :to="link">
-          <img
-            class="app-article__image"
-            :src="images.jpg1x"
-            :srcset="`
-               ${images.jpg1x} 1x,
-              ${images.jpg2x} 2x`"
-            :alt="images.alt"
-          />
-        </RouterLink>
-        <AppFigcaption class="app-article__figcaption" :datetime="dateISO">
-          <template #date>{{ formattedDate }}</template>
-          <template #author>{{ author }}</template>
-        </AppFigcaption>
-      </figure>
+    <figure class="app-article__image-wrapper">
+      <RouterLink :to="`/blog/article/${article.id}`">
+        <img
+          class="app-article__image"
+          :src="img1x"
+          :srcset="`${img1x} 1x, ${img2x} 2x`"
+          :alt="article.images.alt"
+        />
+      </RouterLink>
+      <AppFigcaption class="app-article__figcaption" :datetime="article.dateISO">
+        <template #date>{{ article.formattedDate }}</template>
+        <template #author>{{ article.author }}</template>
+      </AppFigcaption>
+    </figure>
+
+    <template v-if="mode === 'preview'">
       <h2 class="app-article__title">
-        <RouterLink :to="link" class="app-article__link">{{ title }}</RouterLink>
+        <RouterLink :to="`/blog/article/${article.id}`" class="app-article__link">{{
+          article.title
+        }}</RouterLink>
       </h2>
       <p class="app-article__excerpt">
-        {{ excerpt }}
+        {{ article.intro }}
         <span class="app-article__dots">...</span>
       </p>
-      <RouterLink :to="link" class="app-article__button highlight">Read more</RouterLink>
-      <slot></slot>
-    </AppContainer>
+      <RouterLink :to="`/blog/article/${article.id}`" class="app-article__button highlight"
+        >Read more</RouterLink
+      >
+    </template>
+
+    <template v-if="mode === 'short'">
+      <h2 class="app-article__title">
+        <RouterLink :to="`/blog/article/${article.id}`" class="app-article__link">{{
+          article.title
+        }}</RouterLink>
+      </h2>
+      <RouterLink :to="`/blog/article/${article.id}`" class="app-article__button highlight"
+        >Read more</RouterLink
+      >
+    </template>
+
+    <template v-if="mode === 'full'">
+      <p class="first-paragraph">{{ article.firstParagraph }}</p>
+      <p class="second-paragraph">{{ article.secondParagraph }}</p>
+      <section v-for="(section, index) in article.sections" :key="index">
+        <h3>{{ section.subtittle }}</h3>
+        <p v-for="(p, i) in section.paragraphs" :key="i">{{ p }}</p>
+      </section>
+    </template>
+    <slot name="decor"></slot>
   </article>
 </template>
 
@@ -84,6 +96,10 @@ defineProps({
     height: 100%;
     width: 100%;
     object-fit: cover;
+    aspect-ratio: 355/230;
+    @media (min-width: 1024px) {
+      aspect-ratio: 793/420;
+    }
   }
 
   &__title {

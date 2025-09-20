@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "images": {
+      "jpg1x": "article01-1x.jpg",
+      "jpg2x": "article01-2x.jpg",
+      "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
+    },
+    "formattedDate": "07.03.2020",
+    "dateISO": "2020-03-07",
+    "author": "admin",
+    "title": "Changing image resizing with the ImageMagick console utility",
+    "intro": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width,",
+    "firstParagraph": "firstParagraph",
+    "secondParagraph": "secondParagraph",
+    "sections": [
+      {
+        "subtittle": "First subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Second subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Third subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "images": {
+      "jpg1x": "article02-1x.jpg",
+      "jpg2x": "article02-2x.jpg",
+      "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
+    },
+    "formattedDate": "07.03.2020",
+    "dateISO": "2020-03-07",
+    "author": "admin",
+    "title": "How to learn new beginners easily",
+    "intro": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage,",
+    "firstParagraph": "firstParagraph",
+    "sections": [
+      {
+        "subtittle": "First subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Second subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Third subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "images": {
+      "jpg1x": "article03-1x.jpg",
+      "jpg2x": "article03-2x.jpg",
+      "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
+    },
+    "formattedDate": "07.03.2020",
+    "dateISO": "2020-03-07",
+    "author": "admin",
+    "title": "Creating Great Gutenberg WordPress Blocks",
+    "intro": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block",
+    "firstParagraph": "firstParagraph",
+    "sections": [
+      {
+        "subtittle": "First subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Second subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Third subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "images": {
+      "jpg1x": "article04-1x.jpg",
+      "jpg2x": "article04-2x.jpg",
+      "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
+    },
+    "formattedDate": "07.03.2020",
+    "dateISO": "2020-03-07",
+    "author": "admin",
+    "title": "Is it procrastination?",
+    "intro": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage",
+    "firstParagraph": "firstParagraph",
+    "sections": [
+      {
+        "subtittle": "First subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Second subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Third subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "images": {
+      "jpg1x": "article05-1x.jpg",
+      "jpg2x": "article05-2x.jpg",
+      "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
+    },
+    "formattedDate": "07.03.2020",
+    "dateISO": "2020-03-07",
+    "author": "admin",
+    "title": "Creation of an online store OpenCart 3x independently",
+    "intro": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block",
+    "firstParagraph": "firstParagraph",
+    "sections": [
+      {
+        "subtittle": "First subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Second subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      },
+      {
+        "subtittle": "Third subtitle",
+        "paragraphs": ["First paragraph", "Second paragraph", "Third paragraph"]
+      }
+    ]
+  }
+]

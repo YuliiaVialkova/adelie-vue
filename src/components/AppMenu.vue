@@ -36,7 +36,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: toRem(50);
+    flex-wrap: wrap;
+    row-gap: toRem(20);
+    column-gap: toRem(50);
+    @media (min-width: 1024px) {
+      flex-wrap: wrap;
+    }
     .app-menu__item {
       font-size: 0;
       line-height: 1;

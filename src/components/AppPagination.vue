@@ -36,15 +36,29 @@ import { RouterLink } from 'vue-router'
     display: inline-block;
   }
   &__previous-page {
-    margin: 0 toRem(48) 0 toRem(30);
+    margin: 0 50px 0 0px;
+    @media (min-width: 1024px) {
+      margin: 0 48px 0 30px;
+    }
   }
   &__next-page {
-    margin: 0 toRem(30) 0 toRem(48);
+    margin: 0 0px 0 50px;
+    @media (min-width: 1024px) {
+      margin: 0 30px 0 48px;
+    }
   }
   &__list {
     display: inline-flex;
     gap: 48px;
+    li:nth-child(4),
+    li:nth-child(5) {
+      display: none;
+      @media (min-width: 1024px) {
+        display: inline-block;
+      }
+    }
   }
+
   &__page--active {
     color: var(--additional-color-text);
     position: relative;
