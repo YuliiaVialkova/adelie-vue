@@ -25,7 +25,7 @@ const img2x = computed(
 </script>
 
 <template>
-  <article class="app-article">
+  <article class="app-article" :class="`app-article--${mode}`">
     <figure class="app-article__image-wrapper">
       <RouterLink :to="`/blog/article/${article.id}`">
         <img
@@ -68,14 +68,27 @@ const img2x = computed(
     </template>
 
     <template v-if="mode === 'full'">
-      <p class="first-paragraph">{{ article.firstParagraph }}</p>
-      <p class="second-paragraph">{{ article.secondParagraph }}</p>
+      <p class="app-article__first-paragraph">{{ article.firstParagraph }}</p>
+      <p class="app-article__second-paragraph">{{ article.secondParagraph }}</p>
       <section v-for="(section, index) in article.sections" :key="index">
-        <h3>{{ section.subtittle }}</h3>
-        <p v-for="(p, i) in section.paragraphs" :key="i">{{ p }}</p>
+        <h3 class="app-article__subtitle">{{ section.subtittle }}</h3>
+        <p
+          class="app-article__paragraph"
+          v-for="(p, i) in section.paragraphs"
+          :key="i"
+          :class="{
+            'app-article__paragraph--boldAndFrame': index === 0 && i === 2,
+            'app-article__paragraph--bold':
+              index === article.sections.length - 1 && i === section.paragraphs.length - 1,
+          }"
+        >
+          <span class="app-article__paragraph--frame" v-if="index === 0 && i === 2"></span>
+          {{ p }}
+        </p>
       </section>
     </template>
-    <slot name="decor"></slot>
+    <slot name="decorForBlog"></slot>
+    <slot name="decorForFullArticle"></slot>
   </article>
 </template>
 
@@ -144,6 +157,78 @@ const img2x = computed(
   &__button.highlight::after {
     bottom: 9%;
     height: 41%;
+  }
+  &__paragraph {
+    &--boldAndFrame {
+      font-weight: 700;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        background-color: transparent;
+        content: '';
+        border: 1px solid #000;
+        top: -11px;
+        left: -81px;
+        right: -81px;
+        bottom: -29px;
+        pointer-events: none;
+      }
+      &::after {
+        position: absolute;
+        background-color: transparent;
+        content: '';
+        border: 1px solid #000;
+        top: -31px;
+        left: -121px;
+        right: -41px;
+        bottom: -9px;
+        pointer-events: none;
+      }
+      span {
+        position: absolute;
+        background-color: transparent;
+        border: 1px solid #000;
+        top: -21px;
+        left: -41px;
+        right: -121px;
+        bottom: -19px;
+        pointer-events: none;
+      }
+    }
+    &--bold {
+      font-weight: 700;
+    }
+  }
+  &--full {
+    .app-article__image-wrapper {
+      min-height: 250px;
+      aspect-ratio: 355/250;
+    }
+    .app-article__image {
+      aspect-ratio: 355/250;
+    }
+    @media (min-width: 1024px) {
+      .app-article__image-wrapper {
+        margin-bottom: 40px;
+      }
+      p {
+        font-size: toRem(20);
+        line-height: 1.75;
+        margin: 23px 0;
+        &.app-article__paragraph--boldAndFrame {
+          margin: 50px 0;
+        }
+      }
+      h3 {
+        font-size: toRem(30);
+        line-height: 1.33;
+        margin-top: 30px;
+      }
+      h3 + p {
+        margin-top: 10px;
+      }
+    }
   }
 }
 </style>

@@ -9,7 +9,7 @@ import DecorCircle from '@/components/decors/DecorCircle.vue'
 import DecorWavyLine5 from '@/components/decors/DecorWavyLine5.vue'
 import DecorWavyLine6 from '@/components/decors/DecorWavyLine6.vue'
 import DecorPlus from '@/components/decors/DecorPlus.vue'
-
+import DecorWavyLine4 from '@/components/decors/DecorWavyLine4.vue'
 const store = useArticlesStore()
 </script>
 
@@ -20,6 +20,11 @@ const store = useArticlesStore()
       :breadcrumbs="[{ label: 'Home', href: '/' }, { label: 'Blog' }]"
     >
       <template #heading>Blog</template>
+      <DecorWavyLine4
+        class="blog-view__decor decor blog-view__decor--wavy-line4 visible-on-desktop"
+        top="-124%"
+        left="-22%"
+      />
     </AppTitle>
     <div class="blog-view__articles">
       <AppContainer class="blog-view__container app-container--small">
@@ -30,7 +35,7 @@ const store = useArticlesStore()
           :article="article"
           mode="preview"
         >
-          <template #decor>
+          <template #decorForBlog>
             <!-- first article on a page -->
             <DecorPlus
               v-if="index % 5 === 0"

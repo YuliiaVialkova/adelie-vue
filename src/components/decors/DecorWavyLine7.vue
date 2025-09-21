@@ -1,0 +1,29 @@
+<script setup>
+import { usePositionStyles } from '@/stores/usePositionStyles'
+
+const props = defineProps({
+  top: { type: String, default: null },
+  left: { type: String, default: null },
+  right: { type: String, default: null },
+  bottom: { type: String, default: null },
+})
+
+const positionStyles = usePositionStyles(props)
+</script>
+
+<template>
+  <svg
+    class="decor-wavy-line7"
+    :style="positionStyles"
+    xmlns="http://www.w3.org/2000/svg"
+    width="611"
+    height="1617"
+    viewBox="0 0 611 1617"
+    fill="none"
+  >
+    <path
+      d="M515 -36C684 -36 618 598 388 620M388 620C158 642 60 520 134 454C208 388 376 376 388 620ZM388 620C400 864 -140 1616 -140 1616"
+      stroke="black"
+    />
+  </svg>
+</template>

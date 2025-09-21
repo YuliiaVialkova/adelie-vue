@@ -1,7 +1,6 @@
 <script setup>
 import DecorRainLeft from './decors/DecorRainLeft.vue'
 import DecorRainRight from './decors/DecorRainRight.vue'
-import DecorWavyLine4 from './decors/DecorWavyLine4.vue'
 
 import AppContainer from './AppContainer.vue'
 import AppBreadcrumbs from './AppBreadcrumbs.vue'
@@ -20,20 +19,17 @@ const props = defineProps({
       <h1 class="app-title__heading"><slot name="heading"></slot></h1>
       <DecorRainLeft
         class="app-title__decor decor app-title__decor--rain-left visible-on-desktop"
-        top="-13px"
-        left="-40px"
+        top="-23px"
+        left="-22px"
       />
       <DecorRainRight
         class="app-title__decor decor app-title__decor--rain-right visible-on-desktop"
-        top="-5px"
-        right="14px"
+        top="-12px"
+        right="-10px"
       />
-      <DecorWavyLine4
-        class="app-title__decor decor app-title__decor--wavy-line4 visible-on-desktop"
-        top="-124%"
-        left="-22%"
-      />
+
       <AppBreadcrumbs class="app-title__breadcrumbs" :breadcrumbs="props.breadcrumbs" />
+      <slot></slot>
     </AppContainer>
   </section>
 </template>
@@ -51,8 +47,10 @@ const props = defineProps({
     margin-bottom: toRem(36);
 
     @media (min-width: 1024px) {
-      margin-bottom: toRem(28);
-      margin-top: toRem(13);
+      margin: toRem(13) auto toRem(28);
+      //margin-bottom: toRem(28);
+      //margin-top: toRem(13);
+      max-width: 790px;
     }
   }
   &__breadcrumbs {
