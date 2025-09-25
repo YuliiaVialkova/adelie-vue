@@ -143,5 +143,8 @@ const article = store.articles.find((a) => a.id === articleID)
   &__recommend {
     margin-bottom: toRem(20);
   }
+  #decorForSlider {
+    pointer-events: none;
+  }
 }
 </style>
