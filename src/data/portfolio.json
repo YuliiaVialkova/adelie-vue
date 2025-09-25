@@ -6,7 +6,8 @@
     "type": "HTML та CSS верстання",
     "images": {
       "jpg1x": "portfolio01-1x.jpg",
-      "jpg2x": "portfolio01-2x.jpg"
+      "jpg2x": "portfolio01-2x.jpg",
+      "alt": "A car audio WordPress theme with an engaging design, ideal for showcasing audio products and services in the automotive niche."
     },
     "desc": "Design and development of an adaptive website design concept for a platform that provides online tutors"
   },
@@ -17,7 +18,8 @@
     "type": "SaaS projects",
     "images": {
       "jpg1x": "portfolio02-1x.jpg",
-      "jpg2x": "portfolio02-2x.jpg"
+      "jpg2x": "portfolio02-2x.jpg",
+      "alt": "A website page displaying a product with images, descriptions, and pricing information prominently featured."
     },
     "desc": "Design and development of an adaptive website design concept for a platform that provides online tutors. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dicta voluptates deserunt asperiores!."
   },
