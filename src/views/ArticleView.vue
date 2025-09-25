@@ -124,9 +124,9 @@ const article = store.articles.find((a) => a.id === articleID)
 
 <style lang="scss">
 .article-view {
-  margin-bottom: 244px;
+  margin-bottom: toRem(244);
   @media (min-width: 1024px) {
-    margin-bottom: 55px;
+    margin-bottom: toRem(55);
   }
   &__caption {
     margin-bottom: 46px;
@@ -135,13 +135,13 @@ const article = store.articles.find((a) => a.id === articleID)
     }
   }
   &__full {
-    margin-bottom: 44px;
+    margin-bottom: toRem(44);
     @media (min-width: 1024px) {
-      margin-bottom: 70px;
+      margin-bottom: toRem(70);
     }
   }
   &__recommend {
-    margin-bottom: 20px;
+    margin-bottom: toRem(20);
   }
 }
 </style>

@@ -31,7 +31,7 @@ import IconAuthor from '@/components/icons/IconAuthor.vue'
   gap: 10px 50px;
   font-size: toRem(17);
   line-height: 1.29;
-  padding: toRem(21) 20px toRem(16);
+  padding: toRem(21) toRem(20) toRem(16);
 
   &__date,
   &__author {

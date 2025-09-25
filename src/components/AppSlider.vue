@@ -132,9 +132,9 @@ const visibleArticles = computed(() => {
     justify-content: space-between;
     gap: 10px;
     align-items: center;
-    margin: 39px 0 37px;
+    margin: toRem(39) 0 toRem(37);
     @media (min-width: 1024px) {
-      margin: 69px 0 81px;
+      margin: toRem(69) 0 toRem(81);
     }
   }
   &__previous,
@@ -178,9 +178,9 @@ const visibleArticles = computed(() => {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin-bottom: toRem(16);
     @media (min-width: 1024px) {
-      margin-bottom: 40px;
+      margin-bottom: toRem(40);
     }
   }
   &__title {

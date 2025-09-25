@@ -111,8 +111,7 @@ const img2x = computed(
     min-height: 230px;
     min-width: 355px;
     aspect-ratio: 355/230;
-    line-height: 0;
-    font-size: 0;
+
     overflow: hidden;
     @media (min-width: 1024px) {
       aspect-ratio: 793/420;
@@ -121,8 +120,6 @@ const img2x = computed(
 
   &__image-link {
     width: auto;
-    line-height: 0;
-    font-size: 0;
   }
   &__image {
     display: block;
@@ -130,8 +127,7 @@ const img2x = computed(
     width: 100%;
     object-fit: cover;
     aspect-ratio: 355/230;
-    line-height: 0;
-    font-size: 0;
+
     @media (min-width: 1024px) {
       aspect-ratio: 793/420;
     }
@@ -140,10 +136,10 @@ const img2x = computed(
   &__title {
     font-size: clamp(toRem(23), 4vw, toRem(30));
     line-height: 1.739;
-    margin: 10px 0 10px;
+    margin: toRem(10) 0 toRem(10);
     @media (min-width: 1024px) {
       line-height: 1.33;
-      margin: 14px 0 3px;
+      margin: toRem(14) 0 toRem(3);
     }
   }
   &__title + &__excerpt {
@@ -153,7 +149,7 @@ const img2x = computed(
     @media (min-width: 1024px) {
       font-size: toRem(20);
       line-height: 1.75;
-      margin-bottom: 3px;
+      margin-bottom: toRem(3);
     }
   }
   &__link {
@@ -235,9 +231,9 @@ const img2x = computed(
     .app-article__image-wrapper {
       min-height: 250px;
       aspect-ratio: 355/250;
-      margin-bottom: 20px;
+      margin-bottom: toRem(20);
       @media (min-width: 1024px) {
-        margin-bottom: 40px;
+        margin-bottom: toRem(40);
       }
     }
     .app-article__image {
@@ -250,36 +246,36 @@ const img2x = computed(
       @media (min-width: 1024px) {
         font-size: toRem(20);
         line-height: 1.75;
-        margin: 23px 0;
+        margin: toRem(23) 0;
       }
       &.app-article__paragraph--boldAndFrame {
-        margin: 54px 0 63px;
+        margin: toRem(54) 0 toRem(63);
         @media (min-width: 1024px) {
-          margin: 50px 0;
+          margin: toRem(50) 0;
         }
       }
     }
     h3 {
       font-size: toRem(23);
       line-height: 1.304;
-      margin-top: 26px;
+      margin-top: toRem(26);
       @media (min-width: 1024px) {
         font-size: toRem(30);
         line-height: 1.33;
-        margin-top: 30px;
+        margin-top: toRem(30);
       }
     }
     h3 + p {
-      margin-top: 16px;
+      margin-top: toRem(16);
       @media (min-width: 1024px) {
-        margin-top: 10px;
+        margin-top: toRem(10);
       }
     }
   }
   &--slider {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: toRem(30);
 
     .app-article__image-wrapper {
       aspect-ratio: 355/230;
@@ -302,14 +298,14 @@ const img2x = computed(
       aspect-ratio: 628/336;
     }
     h2 {
-      margin: 17px 0 5px;
+      margin: toRem(17) 0 toRem(5);
       line-height: 1.4;
       @media (min-width: 1024px) {
-        margin: 19px 0 8px;
+        margin: toRem(19) 0 toRem(8);
       }
     }
     .app-article__button {
-      margin: 3px 0 15px;
+      margin: toRem(3) 0 toRem(15);
       align-self: start;
       @media (min-width: 1024px) {
         margin-top: auto;
