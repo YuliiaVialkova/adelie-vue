@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "title": "Nicoflex1",
+    "category": "apps",
+    "type": "HTML та CSS верстання",
+    "images": {
+      "jpg1x": "portfolio01-1x.jpg",
+      "jpg2x": "portfolio01-2x.jpg"
+    },
+    "desc": "Design and development of an adaptive website design concept for a platform that provides online tutors"
+  },
+  {
+    "id": "2",
+    "title": "Elit Riel",
+    "category": "saas",
+    "type": "SaaS projects",
+    "images": {
+      "jpg1x": "portfolio02-1x.jpg",
+      "jpg2x": "portfolio02-2x.jpg"
+    },
+    "desc": "Design and development of an adaptive website design concept for a platform that provides online tutors. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dicta voluptates deserunt asperiores!."
+  },
+  {
+    "id": "3",
+    "title": "Nicoflex1",
+    "category": "stores",
+    "type": "Mobile programming",
+    "images": {
+      "jpg1x": "portfolio03-1x.jpg",
+      "jpg2x": "portfolio03-2x.jpg"
+    },
+    "desc": "Design and development of an adaptive website design concept for a platform that provides online tutors. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, iure."
+  },
+  {
+    "id": "4",
+    "title": "Nicoflex2",
+    "category": "apps",
+    "type": "HTML та CSS верстання",
+    "images": {
+      "jpg1x": "portfolio04-1x.jpg",
+      "jpg2x": "portfolio04-2x.jpg"
+    },
+    "desc": "Design and development "
+  }
+]
