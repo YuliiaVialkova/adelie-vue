@@ -48,8 +48,6 @@ const props = defineProps({
 
     @media (min-width: 1024px) {
       margin: toRem(13) auto toRem(28);
-      //margin-bottom: toRem(28);
-      //margin-top: toRem(13);
       max-width: 790px;
     }
   }

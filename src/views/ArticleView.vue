@@ -9,6 +9,7 @@ import DecorPlus from '@/components/decors/DecorPlus.vue'
 import DecorThreeLines from '@/components/decors/DecorThreeLines.vue'
 import DecorWavyLine5 from '@/components/decors/DecorWavyLine5.vue'
 import DecorCircle from '@/components/decors/DecorCircle.vue'
+import AppSlider from '@/components/AppSlider.vue'
 
 const store = useArticlesStore()
 const route = useRoute()
@@ -16,17 +17,6 @@ const route = useRoute()
 const articleID = Number(route.params.id)
 
 const article = store.articles.find((a) => a.id === articleID)
-
-const otherArticles = store.articles.filter((a) => a.id !== articleID)
-
-function getRandomArticle(arr, count) {
-  return arr
-    .slice()
-    .sort(() => Math.random() - 0.5)
-    .slice(0, count)
-}
-
-const recommended = getRandomArticle(otherArticles, 2)
 </script>
 
 <template>
@@ -56,6 +46,9 @@ const recommended = getRandomArticle(otherArticles, 2)
             width="207"
             height="45"
           />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="18%" left="13%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="45%" left="14%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="67.5%" left="7%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="-1%" left="-18%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="-3%" left="-61%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="7%" left="-47%" />
@@ -69,6 +62,12 @@ const recommended = getRandomArticle(otherArticles, 2)
           <DecorPlus class="article-view__decor visible-on-desktop" top="90%" left="-12%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="109%" left="-46%" />
 
+          <DecorPlus class="article-view__decor visible-on-mobile" top="-2%" right="3%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="30%" right="3%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="55%" right="29%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="64.5%" right="43%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="69%" right="8%" />
+          <DecorPlus class="article-view__decor visible-on-mobile" top="85%" right="30%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="-2%" right="-30%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="2%" right="-58%" />
           <DecorPlus class="article-view__decor visible-on-desktop" top="13%" right="-55%" />
@@ -110,34 +109,39 @@ const recommended = getRandomArticle(otherArticles, 2)
     </AppContainer>
 
     <div class="article-view__footer">
-      <AppContainer class="article-view__footer-container app-container--middle">
-        <div class="article-view__recommend">
-          <AppArticle
-            class="article-view__preview"
-            v-for="rec in recommended"
-            :key="rec.id"
-            :article="rec"
-            mode="short"
-          ></AppArticle>
-        </div>
-      </AppContainer>
+      <AppSlider class="article-view__recommend" :articles="store.articles" :current-id="articleID">
+        <template #decorForSlider>
+          <DecorPlus class="article-view__decor visible-on-desktop" top="81%" left="-6%" />
+          <DecorPlus class="article-view__decor visible-on-desktop" bottom="-15%" left="19%" />
+          <DecorPlus class="article-view__decor visible-on-desktop" bottom="-2%" left="52%" />
+          <DecorPlus class="article-view__decor visible-on-desktop" top="15%" right="43%" />
+          <DecorPlus class="article-view__decor visible-on-desktop" top="18%" right="-17%" />
+        </template>
+      </AppSlider>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .article-view {
+  margin-bottom: 244px;
+  @media (min-width: 1024px) {
+    margin-bottom: 55px;
+  }
   &__caption {
-    margin-bottom: 37px;
+    margin-bottom: 46px;
     @media (min-width: 1024px) {
       margin-bottom: toRem(55);
     }
   }
+  &__full {
+    margin-bottom: 44px;
+    @media (min-width: 1024px) {
+      margin-bottom: 70px;
+    }
+  }
   &__recommend {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 20px;
+    margin-bottom: 20px;
   }
 }
 </style>

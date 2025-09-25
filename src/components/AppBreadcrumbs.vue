@@ -23,10 +23,14 @@ defineProps({
 
 <style lang="scss">
 .app-breadcrumbs {
+  &__list {
+    line-height: 0;
+  }
   &__item {
     display: inline-block;
     color: var(--main-color-text);
     transition: color 0.3s;
+    line-height: 1.15;
   }
   &__item:last-child .app-breadcrumbs__link,
   &__item:last-child .app-breadcrumbs__text {

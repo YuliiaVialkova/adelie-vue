@@ -27,7 +27,7 @@ const img2x = computed(
 <template>
   <article class="app-article" :class="`app-article--${mode}`">
     <figure class="app-article__image-wrapper">
-      <RouterLink :to="`/blog/article/${article.id}`">
+      <RouterLink :to="`/blog/article/${article.id}`" class="app-article__image-link">
         <img
           class="app-article__image"
           :src="img1x"
@@ -57,6 +57,17 @@ const img2x = computed(
     </template>
 
     <template v-if="mode === 'short'">
+      <h2 class="app-article__title">
+        <RouterLink :to="`/blog/article/${article.id}`" class="app-article__link">{{
+          article.title
+        }}</RouterLink>
+      </h2>
+      <RouterLink :to="`/blog/article/${article.id}`" class="app-article__button highlight"
+        >Read more</RouterLink
+      >
+    </template>
+
+    <template v-if="mode === 'slider'">
       <h2 class="app-article__title">
         <RouterLink :to="`/blog/article/${article.id}`" class="app-article__link">{{
           article.title
@@ -100,16 +111,27 @@ const img2x = computed(
     min-height: 230px;
     min-width: 355px;
     aspect-ratio: 355/230;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
     @media (min-width: 1024px) {
       aspect-ratio: 793/420;
     }
   }
+
+  &__image-link {
+    width: auto;
+    line-height: 0;
+    font-size: 0;
+  }
   &__image {
     display: block;
-    height: 100%;
+    height: auto;
     width: 100%;
     object-fit: cover;
     aspect-ratio: 355/230;
+    line-height: 0;
+    font-size: 0;
     @media (min-width: 1024px) {
       aspect-ratio: 793/420;
     }
@@ -171,29 +193,38 @@ const img2x = computed(
         top: -11px;
         left: -81px;
         right: -81px;
-        bottom: -29px;
+        bottom: -35px;
         pointer-events: none;
+        @media (min-width: 1024px) {
+          bottom: -29px;
+        }
       }
       &::after {
         position: absolute;
         background-color: transparent;
         content: '';
         border: 1px solid #000;
-        top: -31px;
+        top: -34px;
         left: -121px;
         right: -41px;
-        bottom: -9px;
+        bottom: -12px;
         pointer-events: none;
+        @media (min-width: 1024px) {
+          bottom: -9px;
+        }
       }
       span {
         position: absolute;
         background-color: transparent;
         border: 1px solid #000;
-        top: -21px;
+        top: -23px;
         left: -41px;
         right: -121px;
-        bottom: -19px;
+        bottom: -24px;
         pointer-events: none;
+        @media (min-width: 1024px) {
+          bottom: -19px;
+        }
       }
     }
     &--bold {
@@ -204,29 +235,84 @@ const img2x = computed(
     .app-article__image-wrapper {
       min-height: 250px;
       aspect-ratio: 355/250;
+      margin-bottom: 20px;
+      @media (min-width: 1024px) {
+        margin-bottom: 40px;
+      }
     }
     .app-article__image {
       aspect-ratio: 355/250;
     }
-    @media (min-width: 1024px) {
-      .app-article__image-wrapper {
-        margin-bottom: 40px;
-      }
-      p {
+    p {
+      font-size: toRem(16);
+      line-height: 1.56;
+      margin: 12px 0;
+      @media (min-width: 1024px) {
         font-size: toRem(20);
         line-height: 1.75;
         margin: 23px 0;
-        &.app-article__paragraph--boldAndFrame {
+      }
+      &.app-article__paragraph--boldAndFrame {
+        margin: 54px 0 63px;
+        @media (min-width: 1024px) {
           margin: 50px 0;
         }
       }
-      h3 {
+    }
+    h3 {
+      font-size: toRem(23);
+      line-height: 1.304;
+      margin-top: 26px;
+      @media (min-width: 1024px) {
         font-size: toRem(30);
         line-height: 1.33;
         margin-top: 30px;
       }
-      h3 + p {
+    }
+    h3 + p {
+      margin-top: 16px;
+      @media (min-width: 1024px) {
         margin-top: 10px;
+      }
+    }
+  }
+  &--slider {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .app-article__image-wrapper {
+      aspect-ratio: 355/230;
+      width: auto;
+      height: auto;
+      overflow: hidden;
+      flex: 0 0 auto;
+      @media (min-width: 1024px) {
+        aspect-ratio: 628/336;
+      }
+    }
+    .app-article__image-link {
+      height: 100%;
+      width: 100%;
+    }
+    .app-article__image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 628/336;
+    }
+    h2 {
+      margin: 17px 0 5px;
+      line-height: 1.4;
+      @media (min-width: 1024px) {
+        margin: 19px 0 8px;
+      }
+    }
+    .app-article__button {
+      margin: 3px 0 15px;
+      align-self: start;
+      @media (min-width: 1024px) {
+        margin-top: auto;
       }
     }
   }
