@@ -28,6 +28,12 @@ const router = createRouter({
       component: () => import('../views/PortfolioView.vue'),
     },
     {
+      path: '/portfolio/item/:title',
+      name: 'card',
+      props: true,
+      component: () => import('../views/PortfolioItemView.vue'),
+    },
+    {
       path: '/contact',
       name: 'contact',
 

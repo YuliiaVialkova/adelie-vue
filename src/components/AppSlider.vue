@@ -17,10 +17,6 @@ const props = defineProps({
 
 const otherArticles = computed(() => {
   const filtered = props.articles.filter((a) => a.id !== props.currentId)
-  console.log('articles', props.articles)
-  console.log('currentId', props.currentId)
-  console.log('otherArticles', filtered)
-
   return filtered
 })
 

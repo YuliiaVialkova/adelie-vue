@@ -1,9 +1,8 @@
 <script setup>
 import AppFigcaption from '@/components/AppFigcaption.vue'
 import { RouterLink } from 'vue-router'
-import { computed } from 'vue'
 
-const props = defineProps({
+defineProps({
   article: {
     type: Object,
     required: true,
@@ -13,15 +12,6 @@ const props = defineProps({
     default: 'preview',
   },
 })
-
-const img1x = computed(
-  () =>
-    new URL(`../assets/images/content/blog/${props.article.images.jpg1x}`, import.meta.url).href,
-)
-const img2x = computed(
-  () =>
-    new URL(`../assets/images/content/blog/${props.article.images.jpg2x}`, import.meta.url).href,
-)
 </script>
 
 <template>
@@ -30,8 +20,8 @@ const img2x = computed(
       <RouterLink :to="`/blog/article/${article.id}`" class="app-article__image-link">
         <img
           class="app-article__image"
-          :src="img1x"
-          :srcset="`${img1x} 1x, ${img2x} 2x`"
+          :src="article.images.jpg1x"
+          :srcset="`${article.images.jpg1x} 1x, ${article.images.jpg2x} 2x`"
           :alt="article.images.alt"
         />
       </RouterLink>

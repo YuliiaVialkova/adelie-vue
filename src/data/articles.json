@@ -2,8 +2,8 @@
   {
     "id": 1,
     "images": {
-      "jpg1x": "article01-1x.jpg",
-      "jpg2x": "article01-2x.jpg",
+      "jpg1x": "public/images/blog/article01-1x.jpg",
+      "jpg2x": "public/images/blog/article01-2x.jpg",
       "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
     },
     "formattedDate": "07.03.2020",
@@ -47,8 +47,8 @@
   {
     "id": 2,
     "images": {
-      "jpg1x": "article02-1x.jpg",
-      "jpg2x": "article02-2x.jpg",
+      "jpg1x": "public/images/blog/article02-1x.jpg",
+      "jpg2x": "public/images/blog/article02-2x.jpg",
       "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
     },
     "formattedDate": "07.03.2020",
@@ -92,8 +92,8 @@
   {
     "id": 3,
     "images": {
-      "jpg1x": "article03-1x.jpg",
-      "jpg2x": "article03-2x.jpg",
+      "jpg1x": "public/images/blog/article03-1x.jpg",
+      "jpg2x": "public/images/blog/article03-2x.jpg",
       "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
     },
     "formattedDate": "07.03.2020",
@@ -137,8 +137,8 @@
   {
     "id": 4,
     "images": {
-      "jpg1x": "article04-1x.jpg",
-      "jpg2x": "article04-2x.jpg",
+      "jpg1x": "public/images/blog/article04-1x.jpg",
+      "jpg2x": "public/images/blog/article04-2x.jpg",
       "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
     },
     "formattedDate": "07.03.2020",
@@ -182,8 +182,8 @@
   {
     "id": 5,
     "images": {
-      "jpg1x": "article05-1x.jpg",
-      "jpg2x": "article05-2x.jpg",
+      "jpg1x": "public/images/blog/article05-1x.jpg",
+      "jpg2x": "public/images/blog/article05-2x.jpg",
       "alt": "A computer desk featuring three monitors and a keyboard, arranged for an efficient workspace setup."
     },
     "formattedDate": "07.03.2020",
